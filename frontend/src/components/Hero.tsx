@@ -1,4 +1,13 @@
+'use client';
+
 export default function Hero() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.querySelector(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16">
       <div className="text-center text-white">
@@ -9,10 +18,16 @@ export default function Hero() {
           Desarrollador Full Stack especializado en React, Node.js y Machine Learning
         </p>
         <div className="space-x-4">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+          <button 
+            onClick={() => scrollToSection('#projects')}
+            className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+          >
             Ver Proyectos
           </button>
-          <button className="border border-white text-white hover:bg-white/10 px-8 py-3 rounded-lg font-semibold transition-colors">
+          <button 
+            onClick={() => scrollToSection('#contact')}
+            className="border border-white text-white hover:bg-white/10 px-8 py-3 rounded-lg font-semibold transition-colors"
+          >
             Contactar
           </button>
         </div>

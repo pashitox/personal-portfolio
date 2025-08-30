@@ -1,4 +1,18 @@
-export interface Project {
+// Este script crea imágenes placeholder básicas
+const { writeFileSync } = require('fs');
+const { join } = require('path');
+
+// Crear imágenes SVG base64 como placeholder
+const placeholderSVG = `<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#374151"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#9CA3AF" font-family="Arial" font-size="20">Project Image</text>
+</svg>`;
+
+const base64Image = Buffer.from(placeholderSVG).toString('base64');
+const dataURI = `data:image/svg+xml;base64,${base64Image}`;
+
+// Actualizar data.ts para usar placeholders
+const dataContent = `export interface Project {
   id: number;
   title: string;
   description: string;
@@ -26,7 +40,7 @@ export const projectsData: Project[] = [
     technologies: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
     githubUrl: "https://github.com/tu-usuario/ml-recommendation",
     demoUrl: "https://ml-demo.tuportfolio.com",
-    image: "/images/project1.jpg"
+    image: "${dataURI}"
   },
   {
     id: 2,
@@ -35,7 +49,7 @@ export const projectsData: Project[] = [
     technologies: ["React", "TypeScript", "D3.js", "Node.js", "PostgreSQL"],
     githubUrl: "https://github.com/tu-usuario/analytics-dashboard",
     demoUrl: "https://analytics.tuportfolio.com",
-    image: "/images/project2.jpg"
+    image: "${dataURI}"
   },
   {
     id: 3,
@@ -44,7 +58,7 @@ export const projectsData: Project[] = [
     technologies: ["Next.js", "Stripe", "Tailwind CSS", "Node.js", "MySQL"],
     githubUrl: "https://github.com/tu-usuario/ecommerce-platform",
     demoUrl: "https://shop.tuportfolio.com",
-    image: "/images/project3.jpg"
+    image: "${dataURI}"
   }
 ];
 
@@ -74,3 +88,7 @@ export const dashboardStats = {
   happyClients: 8,
   codeCommits: 256
 };
+`;
+
+writeFileSync(join(__dirname, '../src/lib/data.ts'), dataContent);
+console.log('✅ data.ts actualizado con imágenes placeholder');
