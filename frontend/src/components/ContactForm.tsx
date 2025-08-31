@@ -25,25 +25,25 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="min-h-screen flex items-center py-20 px-4 bg-gray-900">
+    <section className="min-h-screen flex items-center py-20 px-4 bg-gray-100 dark:bg-gray-900">
       <div className="max-w-4xl mx-auto">
         <motion.h2 
-          className="text-4xl font-bold text-white text-center mb-4"
+          className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-blue-300">Contacto</span>
+          <span className="text-blue-600 dark:text-blue-300">Contacto</span>
         </motion.h2>
         
         <motion.p 
-          className="text-gray-300 text-center mb-8 max-w-2xl mx-auto"
+          className="text-gray-600 dark:text-gray-300 text-center mb-8 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           ¿Interesado en colaborar o tienes un proyecto en mente? Estoy abierto a oportunidades como 
-          <strong> Senior/Lead Data Engineer, MLOps Engineer, o Data Architect</strong>.
+          <strong className="text-gray-900 dark:text-white"> Senior/Lead Data Engineer, MLOps Engineer, o Data Architect</strong>.
         </motion.p>
 
         <motion.div 
@@ -68,7 +68,7 @@ export default function ContactForm() {
             href="https://github.com/pashitox"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center"
+            className="bg-gray-700 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center"
           >
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
@@ -85,7 +85,7 @@ export default function ContactForm() {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <div>
-            <label htmlFor="name" className="block text-white mb-2">
+            <label htmlFor="name" className="block text-gray-900 dark:text-white mb-2">
               Nombre
             </label>
             <input
@@ -95,13 +95,13 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
               placeholder="Tu nombre"
             />
           </div>
           
           <div>
-            <label htmlFor="email" className="block text-white mb-2">
+            <label htmlFor="email" className="block text-gray-900 dark:text-white mb-2">
               Email
             </label>
             <input
@@ -111,13 +111,13 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
               placeholder="tu.email@ejemplo.com"
             />
           </div>
           
           <div>
-            <label htmlFor="message" className="block text-white mb-2">
+            <label htmlFor="message" className="block text-gray-900 dark:text-white mb-2">
               Mensaje
             </label>
             <textarea
@@ -127,14 +127,14 @@ export default function ContactForm() {
               onChange={handleChange}
               required
               rows={5}
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
               placeholder="Cuéntame sobre tu proyecto o oportunidad de colaboración..."
             />
           </div>
           
           <button
             type="submit"
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors transform hover:scale-105"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors transform hover:scale-105"
           >
             Enviar Mensaje
           </button>

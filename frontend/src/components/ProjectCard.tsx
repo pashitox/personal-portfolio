@@ -17,90 +17,90 @@ interface Project {
   };
 }
 
+
 interface ProjectCardProps {
   project: Project;
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-blue-500/30 transition-all duration-300">
-      <div className="h-48 mb-4 rounded-lg bg-gray-700 flex items-center justify-center overflow-hidden">
+    <div className="bg-white dark:bg-gray-800 backdrop-blur-md rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-lg transition-all duration-300">
+      <div className="h-48 mb-4 rounded-lg bg-gray-300 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
           className="w-full h-full object-cover"
         />
       </div>
-      
-      <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-      <p className="text-gray-300 mb-4 text-sm leading-relaxed">{project.description}</p>
-      
-      {/* Mostrar métricas si existen */}
+
+      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{project.title}</h3>
+      <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">{project.description}</p>
+
       {project.metrics && (
-        <div className="mb-4 p-3 bg-gray-800/50 rounded-lg">
-          <h4 className="text-sm font-semibold text-blue-300 mb-2">Métricas Clave:</h4>
+        <div className="mb-4 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+          <h4 className="text-sm font-semibold text-blue-600 dark:text-blue-300 mb-2">Métricas Clave:</h4>
           <div className="grid grid-cols-2 gap-2 text-xs">
             {project.metrics.accuracy && (
               <div className="flex items-center">
-                <span className="text-green-400 mr-1">✓</span>
-                <span>Accuracy: {project.metrics.accuracy}%</span>
+                <span className="text-green-600 dark:text-green-400 mr-1">✓</span>
+                <span className="text-gray-700 dark:text-gray-300">Accuracy: {project.metrics.accuracy}%</span>
               </div>
             )}
             {project.metrics.dataProcessed && (
               <div className="flex items-center">
-                <span className="text-blue-400 mr-1">📊</span>
-                <span>Data: {project.metrics.dataProcessed}</span>
+                <span className="text-blue-600 dark:text-blue-400 mr-1">📊</span>
+                <span className="text-gray-700 dark:text-gray-300">Data: {project.metrics.dataProcessed}</span>
               </div>
             )}
             {project.metrics.latencyReduction && (
               <div className="flex items-center">
-                <span className="text-yellow-400 mr-1">⚡</span>
-                <span>Latency: -{project.metrics.latencyReduction}</span>
+                <span className="text-yellow-600 dark:text-yellow-400 mr-1">⚡</span>
+                <span className="text-gray-700 dark:text-gray-300">Latency: -{project.metrics.latencyReduction}</span>
               </div>
             )}
             {project.metrics.users && (
               <div className="flex items-center">
-                <span className="text-purple-400 mr-1">👥</span>
-                <span>Users: {project.metrics.users}</span>
+                <span className="text-purple-600 dark:text-purple-400 mr-1">👥</span>
+                <span className="text-gray-700 dark:text-gray-300">Users: {project.metrics.users}</span>
               </div>
             )}
             {project.metrics.deploymentTime && (
               <div className="flex items-center">
-                <span className="text-green-400 mr-1">🚀</span>
-                <span>Deploy: {project.metrics.deploymentTime}</span>
+                <span className="text-green-600 dark:text-green-400 mr-1">🚀</span>
+                <span className="text-gray-700 dark:text-gray-300">Deploy: {project.metrics.deploymentTime}</span>
               </div>
             )}
             {project.metrics.modelsDeployed && (
               <div className="flex items-center">
-                <span className="text-blue-400 mr-1">🤖</span>
-                <span>Models: {project.metrics.modelsDeployed}</span>
+                <span className="text-blue-600 dark:text-blue-400 mr-1">🤖</span>
+                <span className="text-gray-700 dark:text-gray-300">Models: {project.metrics.modelsDeployed}</span>
               </div>
             )}
             {project.metrics.sensorsConnected && (
               <div className="flex items-center">
-                <span className="text-orange-400 mr-1">🔌</span>
-                <span>Sensors: {project.metrics.sensorsConnected}</span>
+                <span className="text-orange-600 dark:text-orange-400 mr-1">🔌</span>
+                <span className="text-gray-700 dark:text-gray-300">Sensors: {project.metrics.sensorsConnected}</span>
               </div>
             )}
           </div>
         </div>
       )}
-      
+
       <div className="flex flex-wrap gap-2 mb-4">
         {project.technologies.map((tech) => (
           <span
             key={tech}
-            className="bg-blue-500/20 text-blue-300 px-2 py-1 rounded text-xs"
+            className="bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 px-2 py-1 rounded text-xs"
           >
             {tech}
           </span>
         ))}
       </div>
-      
+
       <div className="flex space-x-3">
         <a
           href={project.githubUrl}
-          className="flex-1 bg-gray-700 hover:bg-gray-600 text-white text-center py-2 rounded transition-colors flex items-center justify-center"
+          className="flex-1 bg-gray-800 dark:bg-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-2 rounded transition-colors flex items-center justify-center"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -111,7 +111,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </a>
         <a
           href={project.demoUrl}
-          className="flex-1 bg-blue-500 hover:bg-blue-600 text-white text-center py-2 rounded transition-colors flex items-center justify-center"
+          className="flex-1 bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600 text-white text-center py-2 rounded transition-colors flex items-center justify-center"
           target="_blank"
           rel="noopener noreferrer"
         >

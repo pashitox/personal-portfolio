@@ -1,6 +1,12 @@
-export const metadata = {
-  title: 'Mi Portfolio',
-  description: 'Portfolio personal con Next.js',
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Pashitox - Portfolio',
+  description: 'Data Engineer & AI Solutions Architect',
 }
 
 export default function RootLayout({
@@ -9,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es">
-      <body>{children}</body>
+    <html lang="es" className="dark">
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
