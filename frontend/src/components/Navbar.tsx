@@ -12,12 +12,12 @@ interface NavbarProps {
 export default function Navbar({ currentSection, setCurrentSection }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // --- 1. Estados ---
+  // --- 1. States ---
   const [time, setTime] = useState<string>('');
   const [location, setLocation] = useState<string>('');
   const [weather, setWeather] = useState<string>('');
 
-  // --- 2. Reloj ---
+  // --- 2. Clock ---
   useEffect(() => {
     const updateClock = () => {
       const now = new Date();
@@ -28,43 +28,43 @@ export default function Navbar({ currentSection, setCurrentSection }: NavbarProp
     return () => clearInterval(interval);
   }, []);
 
-  // --- 3. Ubicación + Clima con ipapi.co ---
+  // --- 3. Location + Weather using ipapi.co ---
   useEffect(() => {
     fetch('https://ipapi.co/json/')
       .then((res) => res.json())
       .then((data) => {
-        console.log('Ubicación detectada:', data);
+        console.log('Detected location:', data);
         if (data.city && data.country_name && data.latitude && data.longitude) {
           setLocation(`${data.city}, ${data.country_name}`);
           fetchWeather(data.latitude, data.longitude);
         } else {
-          setLocation('Ubicación no detectada');
+          setLocation('Location not detected');
         }
       })
       .catch((err) => {
-        console.error('Error obteniendo ubicación:', err);
-        setLocation('Desconocido');
+        console.error('Error fetching location:', err);
+        setLocation('Unknown');
       });
   }, []);
 
-  // --- 4. Clima usando Open-Meteo ---
+  // --- 4. Weather using Open-Meteo ---
   const fetchWeather = async (lat: number, lon: number) => {
     try {
       const res = await fetch(
         `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`
       );
       const data = await res.json();
-      console.log('Clima detectado:', data);
+      console.log('Detected weather:', data);
       if (data.current_weather) {
         const temp = Math.round(data.current_weather.temperature);
         const wind = Math.round(data.current_weather.windspeed);
-        setWeather(`Temp: ${temp}°C, Viento: ${wind} km/h`);
+        setWeather(`Temp: ${temp}°C, Wind: ${wind} km/h`);
       } else {
-        setWeather('Clima no disponible');
+        setWeather('Weather not available');
       }
     } catch (err) {
-      console.error('Error obteniendo clima:', err);
-      setWeather('Clima no disponible');
+      console.error('Error fetching weather:', err);
+      setWeather('Weather not available');
     }
   };
 
@@ -75,13 +75,13 @@ export default function Navbar({ currentSection, setCurrentSection }: NavbarProp
 
           {/* Logo */}
           <div
-            className="text-gray-900 dark:text-white font-bold text-xl cursor-pointer"
+            className="text-gray-900 dark:text-white font-extrabold text-2xl cursor-pointer tracking-wide"
             onClick={() => setCurrentSection('home')}
           >
-            Pashitox
+            Pashitox <span className="block text-xs font-normal text-gray-500 dark:text-gray-400">Data-driven & adaptable</span>
           </div>
 
-          {/* Navegación desktop */}
+          {/* Desktop navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navLinks.map((link) => (
@@ -100,7 +100,7 @@ export default function Navbar({ currentSection, setCurrentSection }: NavbarProp
             </div>
           </div>
 
-          {/* Sección derecha */}
+          {/* Right section */}
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex flex-col items-end text-xs text-gray-700 dark:text-gray-300">
               {time && <span>{time}</span>}
@@ -110,7 +110,7 @@ export default function Navbar({ currentSection, setCurrentSection }: NavbarProp
 
             <ThemeToggle />
 
-            {/* Menú móvil */}
+            {/* Mobile menu */}
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -128,7 +128,7 @@ export default function Navbar({ currentSection, setCurrentSection }: NavbarProp
           </div>
         </div>
 
-        {/* Navegación móvil */}
+        {/* Mobile navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">

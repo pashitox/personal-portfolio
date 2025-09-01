@@ -1,6 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+ // ESLint debería marcarloCCC
+
 
 interface HeroProps {
   setCurrentSection?: (section: string) => void;
@@ -13,7 +16,7 @@ export default function Hero({ setCurrentSection }: HeroProps) {
       className="min-h-screen flex items-center justify-center pt-16 px-4 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:via-blue-900 dark:to-purple-900"
     >
       <div className="max-w-6xl mx-auto w-full flex flex-col-reverse md:flex-row items-center md:items-start gap-8">
-        {/* IZQUIERDA: Texto */}
+        {/* LEFT: Text */}
         <div className="text-center md:text-left flex-1">
           <motion.h1
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4"
@@ -21,7 +24,7 @@ export default function Hero({ setCurrentSection }: HeroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Hola, soy <span className="text-blue-600 dark:text-blue-300">Pashitox</span>
+            Hi, I&apos;m <span className="text-blue-600 dark:text-blue-300">Juan</span>
           </motion.h1>
 
           <motion.h2
@@ -30,7 +33,7 @@ export default function Hero({ setCurrentSection }: HeroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Data Engineer & AI Solutions Architect | From Data to Deployable Intelligence
+            Full Stack Web Developer & Data Engineer
           </motion.h2>
 
           <motion.p
@@ -39,8 +42,9 @@ export default function Hero({ setCurrentSection }: HeroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Arquitecto e implemento plataformas de datos escalables y soluciones de IA de alto impacto
-            para dominios complejos como IoT industrial, ciudades inteligentes y aeroespacial.
+            {`I am a Computer Engineer with a Master's in Research and University Teaching (Central University of Chile),
+  specialized in data engineering and full stack web application development.  
+  I design and build scalable systems, integrating robust backends, interactive frontends, and data solutions for real-world projects.`}
           </motion.p>
 
           <motion.div
@@ -53,13 +57,13 @@ export default function Hero({ setCurrentSection }: HeroProps) {
               onClick={() => setCurrentSection?.('projects')}
               className="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition transform hover:scale-105 text-sm sm:text-base"
             >
-              Ver Proyectos
+              View Projects
             </button>
             <button
               onClick={() => setCurrentSection?.('contact')}
               className="w-full sm:w-auto border border-white text-white hover:bg-white/10 px-6 py-3 rounded-lg font-semibold transition transform hover:scale-105 text-sm sm:text-base"
             >
-              Contactar
+              Contact
             </button>
             <a
               href="https://www.linkedin.com/in/pashitox/"
@@ -75,18 +79,24 @@ export default function Hero({ setCurrentSection }: HeroProps) {
           </motion.div>
         </div>
 
-        {/* DERECHA: Imagen */}
+        {/* RIGHT: Image */}
         <motion.div
           className="flex-1 flex justify-center md:justify-end"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <img
-            src="/images/project1.svg"
-            alt="Foto de Pashitox"
-            className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full border-4 border-blue-500 dark:border-blue-300 object-cover shadow-lg"
-          />
+          <Image
+          src="/images/perfil.jpg"
+          alt="Pashitox Profile Photo"
+          
+
+
+          width={384}  // Ajusta según tu diseño
+          height={384} // Ajusta según tu diseño
+          className="rounded-full border-4 border-blue-500 dark:border-blue-300 object-cover shadow-lg"
+         />       
+
         </motion.div>
       </div>
     </section>

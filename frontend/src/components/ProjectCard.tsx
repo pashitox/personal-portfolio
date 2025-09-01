@@ -1,3 +1,7 @@
+import Image from 'next/image';
+
+
+
 interface Project {
   id: number;
   title: string;
@@ -25,13 +29,13 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="bg-white dark:bg-gray-800 backdrop-blur-md rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-lg transition-all duration-300">
-      <div className="h-48 mb-4 rounded-lg bg-gray-300 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover"
-        />
-      </div>
+       <Image
+         src={project.image}
+         alt={project.title}
+         width={384}   // Ajusta según tu diseño
+         height={192}  // Ajusta según tu diseño
+         className="w-full h-full object-cover rounded-lg"
+  />
 
       <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{project.title}</h3>
       <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm leading-relaxed">{project.description}</p>

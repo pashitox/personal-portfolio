@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-center md:text-left mb-4 md:mb-0">
-            © {currentYear} Pashitox - Data Engineer & AI Solutions Architect. Desarrollado con Next.js y Tailwind CSS.
+            © {currentYear} Juan Gonzalez - Full Stack Web Developer & Data Engineer. Desarrollado con Next.js y Tailwind CSS.
           </p>
           <div className="flex space-x-6">
             <a
@@ -26,7 +26,7 @@ export default function Footer() {
               LinkedIn
             </a>
             <a
-              href="mailto:tu.email@ejemplo.com"
+              href="mailto:pashitox@gmail.com"
               className="text-gray-400 hover:text-white transition-colors"
             >
               Email

@@ -7,7 +7,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
-  const [buttonText, setButtonText] = useState('Enviar Mensaje');
+  const [buttonText, setButtonText] = useState('Send Message');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,7 +16,7 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
-    setButtonText('Enviando...');
+    setButtonText('Sending...');
 
     const form = e.currentTarget;
     const formBody = new FormData(form);
@@ -29,18 +29,18 @@ export default function ContactForm() {
       });
 
       setSubmitted(true);
-      setButtonText('Enviado ✅');
+      setButtonText('Sent ✅');
       setFormData({ name: '', email: '', message: '' });
 
       setTimeout(() => {
         setSubmitted(false);
-        setButtonText('Enviar Mensaje');
+        setButtonText('Send Message');
         setSending(false);
       }, 3000);
     } catch (error) {
-      alert('Ocurrió un error al enviar. Intenta de nuevo.');
+      alert('An error occurred while sending. Please try again.');
       setSending(false);
-      setButtonText('Enviar Mensaje');
+      setButtonText('Send Message');
     }
   };
 
@@ -53,7 +53,7 @@ export default function ContactForm() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-blue-600 dark:text-blue-300">Contacto</span>
+          <span className="text-blue-600 dark:text-blue-300">Contact</span>
         </motion.h2>
 
         <motion.p
@@ -62,8 +62,8 @@ export default function ContactForm() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          ¿Interesado en colaborar o tienes un proyecto en mente? Estoy abierto a oportunidades como{' '}
-          <strong className="text-gray-900 dark:text-white">Senior/Lead Data Engineer, MLOps Engineer, o Data Architect</strong>.
+          Interested in collaborating or have a project in mind? I’m open to opportunities as{' '}
+          <strong className="text-gray-900 dark:text-white">Full Stack Web Developer, Data Engineer, or MLOps Engineer</strong>.
         </motion.p>
 
         <motion.div
@@ -104,10 +104,10 @@ export default function ContactForm() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          {/* Nombre */}
+          {/* Name */}
           <div>
             <label htmlFor="name" className="block text-gray-900 dark:text-white mb-2 text-sm md:text-base">
-              Nombre
+              Name
             </label>
             <input
               type="text"
@@ -117,7 +117,7 @@ export default function ContactForm() {
               onChange={handleChange}
               required
               className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm md:text-base"
-              placeholder="Tu nombre"
+              placeholder="Your name"
             />
           </div>
 
@@ -134,14 +134,14 @@ export default function ContactForm() {
               onChange={handleChange}
               required
               className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm md:text-base"
-              placeholder="tu.email@ejemplo.com"
+              placeholder="your.email@example.com"
             />
           </div>
 
-          {/* Mensaje */}
+          {/* Message */}
           <div>
             <label htmlFor="message" className="block text-gray-900 dark:text-white mb-2 text-sm md:text-base">
-              Mensaje
+              Message
             </label>
             <textarea
               id="message"
@@ -151,11 +151,11 @@ export default function ContactForm() {
               required
               rows={5}
               className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors text-sm md:text-base"
-              placeholder="Cuéntame sobre tu proyecto o oportunidad de colaboración..."
+              placeholder="Tell me about your project or collaboration opportunity..."
             />
           </div>
 
-          {/* Botón */}
+          {/* Button */}
           <button
             type="submit"
             disabled={sending}
@@ -166,7 +166,7 @@ export default function ContactForm() {
             {buttonText}
           </button>
 
-          {/* Mensaje de éxito */}
+          {/* Success message */}
           <AnimatePresence>
             {submitted && (
               <motion.div
@@ -175,7 +175,7 @@ export default function ContactForm() {
                 exit={{ opacity: 0, y: -20 }}
                 className="absolute top-[-50px] left-0 w-full text-center text-green-600 font-semibold"
               >
-                ¡Mensaje enviado con éxito! ✅
+                Message sent successfully! ✅
               </motion.div>
             )}
           </AnimatePresence>
