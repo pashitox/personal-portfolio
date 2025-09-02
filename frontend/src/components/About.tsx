@@ -31,14 +31,14 @@ export default function About() {
         </h3>
         <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
           Computer Engineer with a Master&apos;s Degree in Research and University Teaching (Universidad Central de Chile), 
-          specialized in <strong className="text-gray-900 dark:text-white">Data Engineering</strong> 
+          specialized in <strong className="text-gray-900 dark:text-white">Data Engineering </strong> 
           and currently focused on <strong className="text-gray-900 dark:text-white">Full-Stack Web Development</strong>. 
           I combine experience in data architecture, MLOps, and machine learning with strong skills to build 
           modern, scalable, and optimized web applications.
         </p>
 
         <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
-          My expertise lies in building <strong className="text-gray-900 dark:text-white">end-to-end systems</strong> 
+          My expertise lies in building <strong className="text-gray-900 dark:text-white">end-to-end systems </strong> 
           that seamlessly integrate real-time data ingestion, distributed processing, machine learning, 
           and professional web application development.
         </p>
