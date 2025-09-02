@@ -85,7 +85,7 @@ export const projectsData: Project[] = [
     description: "Anomaly detection system for ESA missions, integrating multiple data sources and predictive models with SHAP-based explanations.",
     technologies: ["Python 3.9", "Pandas, NumPy, Scikit-learn", "XGBoost", "SHAP", "Jupyter Notebook"],
     githubUrl: "https://github.com/pashitox/satellite-anomaly-detector-ESA",
-    demoUrl: "#",
+    demoUrl: "https://github.com/pashitox/satellite-anomaly-detector-ESA",
     image: "/images/project4.png"
   }
 ];
