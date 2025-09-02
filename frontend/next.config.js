@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone', // 👈 Esto es importante para Vercel
+  output: 'standalone',
   images: {
     remotePatterns: [
       {
@@ -9,11 +9,11 @@ const nextConfig = {
       },
     ],
     domains: [],
+    unoptimized: true // 👈 IMPORTANTE para evitar errores de imágenes
   },
   experimental: {
     serverComponentsExternalPackages: ['sharp', 'onnxruntime'],
   },
-  // Configuración adicional para Vercel
   trailingSlash: false,
   compress: true,
 };
