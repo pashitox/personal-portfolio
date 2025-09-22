@@ -59,7 +59,12 @@ export const projectsData: Project[] = [
     technologies: ["Apache Kafka", "Apache Spark", "Airflow", "FastAPI", "Docker", "PostgreSQL"],
     githubUrl: "https://github.com/pashitox/nitro-system",
     demoUrl: "https://github.com/pashitox/nitro-system",
-    image: "/images/project1.png"
+    image: "/images/project1.png",
+    metrics: {
+      dataProcessed: "15TB/month",
+      latencyReduction: "65%",
+      sensorsConnected: 2500
+    }
   },
   {
     id: 2,
@@ -68,7 +73,12 @@ export const projectsData: Project[] = [
     technologies: ["PyTorch", "Docker", "Computer Vision", "Grafana", "TensorFlow"],
     githubUrl: "https://github.com/pashitox/smartcity-energy-genai",
     demoUrl: "https://github.com/pashitox/smartcity-energy-genai",
-    image: "/images/project2.png"
+    image: "/images/project2.png",
+    metrics: {
+      dataProcessed: "2.3TB/month",
+      accuracy: 92.5,
+      users: 350
+    }
   },
   {
     id: 3,
@@ -77,16 +87,40 @@ export const projectsData: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Framer Motion"],
     githubUrl: "https://github.com/pashitox/personal-portfolio",
     demoUrl: "#",
-    image: "/images/project3.png"
+    image: "/images/project3.png",
+    metrics: {
+      users: 2847,
+      deploymentTime: "2.3s",
+      modelsDeployed: 1
+    }
   },
   {
     id: 4,
     title: "Satellite Anomaly Detector — ESA Missions",
     description: "Anomaly detection system for ESA missions, integrating multiple data sources and predictive models with SHAP-based explanations.",
-    technologies: ["Python 3.9", "Pandas, NumPy, Scikit-learn", "XGBoost", "SHAP", "Jupyter Notebook"],
+    technologies: ["Python 3.9", "Pandas", "NumPy", "Scikit-learn", "XGBoost", "SHAP", "Jupyter Notebook"],
     githubUrl: "https://github.com/pashitox/satellite-anomaly-detector-ESA",
     demoUrl: "https://github.com/pashitox/satellite-anomaly-detector-ESA",
-    image: "/images/project4.png"
+    image: "/images/project4.png",
+    metrics: {
+      accuracy: 96.2,
+      modelsDeployed: 3,
+      dataProcessed: "8.5GB/day"
+    }
+  },
+  {
+    id: 5,
+    title: "DataHub Personal  Portfolio + AI Knowledge Platform",
+    description: "Full-stack portfolio and AI knowledge platform with JWT authentication, protected routes, dark mode, and responsive design. Built with Next.js and NestJS.",
+    technologies: ["Next.js", "NestJS", "TypeScript", "Tailwind CSS", "PostgreSQL", "Redis", "Docker"],
+    githubUrl: "https://github.com/pashitox/datahub-platform",
+    demoUrl: "https://github.com/pashitox/datahub-platform",
+    image: "/images/project5.png",
+    metrics: {
+      users: 1750,
+      deploymentTime: "1.8s",
+      modelsDeployed: 2
+    }
   }
 ];
 
@@ -200,7 +234,9 @@ export const technologyUsage = [
   { name: 'PostgreSQL', usage: 90, projects: 14 },
   { name: 'PyTorch', usage: 85, projects: 8 },
   { name: 'Kubernetes', usage: 78, projects: 6 },
-  { name: 'AWS', usage: 75, projects: 7 }
+  { name: 'AWS', usage: 75, projects: 7 },
+  { name: 'Next.js', usage: 88, projects: 5 },
+  { name: 'NestJS', usage: 85, projects: 3 }
 ];
 
 export const projectCategories = [
@@ -208,5 +244,6 @@ export const projectCategories = [
   { name: 'Machine Learning', count: 6, color: '#10B981' },
   { name: 'MLOps', count: 3, color: '#8B5CF6' },
   { name: 'IoT', count: 2, color: '#F59E0B' },
-  { name: 'Visualization', count: 4, color: '#EC4899' }
+  { name: 'Visualization', count: 4, color: '#EC4899' },
+  { name: 'Web Development', count: 5, color: '#06B6D4' }
 ];
