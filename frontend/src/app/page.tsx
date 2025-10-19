@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import AIExperience from '@/components/AIExperience';
 import Projects from '@/components/Projects';
 import Dashboard from '@/components/Dashboard';
 import ContactForm from '@/components/ContactForm';
@@ -18,6 +19,8 @@ export default function Home() {
         return <Hero setCurrentSection={setCurrentSection} />;
       case 'about':
         return <About />;
+      case 'ai-experience':
+        return <AIExperience />;
       case 'projects':
         return <Projects />;
       case 'dashboard':
