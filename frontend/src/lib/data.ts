@@ -121,7 +121,44 @@ export const projectsData: Project[] = [
       deploymentTime: "1.8s",
       modelsDeployed: 2
     }
+  },
+  {
+  id: 6,
+  title: "NexusShop – AI-Powered E-commerce Platform",
+  description:
+    "Full-stack e-commerce platform integrating AI for personalized recommendations, chat-based shopping, and intelligent product discovery. Features multi-auth, Stripe payments, and enterprise-grade security.",
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "NestJS",
+    "PostgreSQL",
+    "Prisma",
+    "Docker",
+    "Stripe API",
+    "OpenAI API",
+    "Redis",
+    "Tailwind CSS",
+    "Resend",
+    "Google OAuth"
+  ],
+  githubUrl: "https://github.com/pashitox/nexus-shop",
+  demoUrl: "https://nexus-shop.vercel.app",
+  image: "/images/project-nexusshop.png",
+  metrics: {
+    users: 2500,
+    modelsDeployed: 3,
+    latencyReduction: "70%",
+    deploymentTime: "1.9s",
+    accuracy: 91.8,
+    dataProcessed: "12TB/month"
   }
+}
+
+
+
+
+
+
 ];
 
 // ---------------- SKILLS ----------------
