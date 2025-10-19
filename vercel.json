@@ -1,5 +1,14 @@
 {
+
   "version": 2,
+  "buildCommand": "cd frontend && npm run build",
+  "outputDirectory": "frontend/.next",
+  "devCommand": "cd frontend && npm run dev",
+  "installCommand": "cd frontend && npm install",
+  "framework": "nextjs",
+
+
+
   "builds": [
     {
       "src": "frontend/package.json",
@@ -11,8 +20,6 @@
       "src": "/(.*)",
       "dest": "/frontend/$1"
     }
-  ],
-  "buildCommand": "cd frontend && npm run build",
-  "outputDirectory": "frontend/.next",
-  "installCommand": "cd frontend && npm install"
+  ]
+  
 }
