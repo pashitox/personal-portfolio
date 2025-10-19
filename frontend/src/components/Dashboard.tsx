@@ -4,6 +4,13 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { dashboardStats, visitorStats, githubStats, monthlyVisitors } from '@/lib/data';
 
+const colorMap = {
+  blue: 'bg-blue-100 dark:bg-blue-500/20 text-blue-600 dark:text-blue-300',
+  green: 'bg-green-100 dark:bg-green-500/20 text-green-600 dark:text-green-300',
+  purple: 'bg-purple-100 dark:bg-purple-500/20 text-purple-600 dark:text-purple-300',
+  orange: 'bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-300',
+};
+
 export default function Dashboard() {
   const [animatedStats, setAnimatedStats] = useState({
     totalVisitors: 0,
@@ -36,6 +43,13 @@ export default function Dashboard() {
     return () => clearInterval(interval);
   }, []);
 
+  const mainStats = [
+    { title: 'Total Visitors', value: animatedStats.totalVisitors, color: 'blue' },
+    { title: 'Projects Completed', value: animatedStats.projectsCompleted, color: 'green' },
+    { title: 'GitHub Stars', value: animatedStats.stars, color: 'purple' },
+    { title: 'Happy Clients', value: animatedStats.happyClients, color: 'orange' },
+  ];
+
   return (
     <section className="min-h-screen flex items-center py-20 px-4 bg-gray-100 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto">
@@ -50,23 +64,17 @@ export default function Dashboard() {
 
         {/* Main cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {[
-            { title: "Total Visitors", value: animatedStats.totalVisitors, color: "blue" },
-            { title: "Projects Completed", value: animatedStats.projectsCompleted, color: "green" },
-            { title: "GitHub Stars", value: animatedStats.stars, color: "purple" },
-            { title: "Happy Clients", value: animatedStats.happyClients, color: "orange" },
-          ].map((stat, i) => (
+          {mainStats.map((stat, i) => (
             <motion.div
               key={stat.title}
-              className={`bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm`}
+              className="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
             >
               <div className="flex items-center">
-                <div className={`p-3 bg-${stat.color}-100 dark:bg-${stat.color}-500/20 rounded-lg`}>
-                  {/* Simple icon placeholders */}
-                  <span className={`w-6 h-6 block bg-${stat.color}-600 rounded-full`} />
+                <div className={`p-3 rounded-lg ${colorMap[stat.color]}`}>
+                  <span className="w-6 h-6 block rounded-full bg-current" />
                 </div>
                 <div className="ml-4">
                   <p className="text-sm text-gray-600 dark:text-gray-400">{stat.title}</p>
