@@ -67,7 +67,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 2,
+    id: 6,
     title: "UrbanNet Smart City Analytics",
     description: "Urban analytics platform with deep learning and interactive dashboards. Processes 2.3TB of data per month.",
     technologies: ["PyTorch", "Docker", "Computer Vision", "Grafana", "TensorFlow"],
@@ -123,7 +123,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-  id: 6,
+  id: 2,
   title: "NexusShop – AI-Powered E-commerce Platform",
   description:
     "Full-stack e-commerce platform integrating AI for personalized recommendations, chat-based shopping, and intelligent product discovery. Features multi-auth, Stripe payments, and enterprise-grade security.",
