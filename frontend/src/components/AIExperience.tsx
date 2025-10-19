@@ -31,13 +31,13 @@ export default function AIExperience() {
             </h3>
             <ul className="list-disc list-inside space-y-4 text-gray-700 dark:text-gray-300 text-base md:text-lg">
               <li>
-                <strong>NexusShop – AI E-commerce Platform:</strong> Full-stack app with GPT-powered chat recommendations, Stripe payments, multi-auth, and Dockerized deployment.
+                <strong>NexusShop – AI E-commerce Platform:</strong> Full-stack platform with GPT-powered chat recommendations, multi-auth, Stripe payments, and fully Dockerized deployment. Designed to personalize the user experience using AI-driven insights.
               </li>
               <li>
-                <strong>UrbanNet – Smart City Analytics:</strong> Deep learning pipeline for traffic & energy data, 2.3TB/month processing, 99.16% accuracy, deployed with FastAPI & MLflow.
+                <strong>UrbanNet – Smart City Analytics:</strong> End-to-end deep learning pipeline for traffic and energy data, processing 2.3TB/month with 99.16% accuracy. Deployed with FastAPI & MLflow for real-time monitoring and predictive insights.
               </li>
               <li>
-                <strong>Satellite Anomaly Prediction:</strong> Python + XGBoost predictive maintenance system, real-time dashboards with Power BI.
+                <strong>Satellite Anomaly Prediction:</strong> Predictive maintenance system using Python & XGBoost, featuring feature engineering, model explainability with SHAP, and real-time dashboards with Power BI.
               </li>
             </ul>
           </div>
@@ -48,10 +48,13 @@ export default function AIExperience() {
               Impact & Skills
             </h3>
             <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed mb-4">
-              I integrate Artificial Intelligence into web applications, turning static apps into intelligent, adaptive, and data-driven platforms. My work covers predictive modeling, ML pipelines, real-time analytics, and cloud deployment.
+              As a self-taught AI practitioner, my Master's in Research and University Teaching has enhanced my ability to learn independently, adopt new technologies rapidly, and apply advanced educational methodologies to solve complex problems.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed mb-4">
+              I specialize in integrating Artificial Intelligence into web and full-stack applications, transforming static systems into intelligent, adaptive, and data-driven platforms. My work encompasses predictive modeling, end-to-end ML pipelines, real-time analytics, and cloud deployment.
             </p>
             <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg leading-relaxed">
-              I am continuously expanding my expertise in AI/ML, MLOps, and full-stack development to build solutions that are scalable, robust, and production-ready.
+              I continuously expand my expertise in AI/ML, MLOps, and full-stack development to deliver solutions that are scalable, robust, and production-ready. My approach combines research-driven problem solving with practical, hands-on implementation.
             </p>
           </div>
         </motion.div>
