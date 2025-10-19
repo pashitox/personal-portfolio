@@ -205,10 +205,12 @@ export const skillsData: Skill[] = [
 export const navLinks: NavLink[] = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About Me" },
+  { href: "#ai-experience", label: "AI Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#dashboard", label: "Dashboard" },
   { href: "#contact", label: "Contact" }
 ];
+
 
 // ---------------- DASHBOARD METRICS ----------------
 export const dashboardStats = {
