@@ -59,7 +59,7 @@ export const projectsData: Project[] = [
     technologies: ["Next.js", "TypeScript", "Node.js", "Playwright", "Docker", "Tailwind CSS", "Express"],
     githubUrl: "https://github.com/pashitox/web-twin",
     demoUrl: "https://github.com/pashitox/web-twin",
-    image: "/images/webtwin.png",
+    image: "/images/twin.png",
     metrics: {
       users: 2847,
       deploymentTime: "1.2s",
