@@ -54,6 +54,52 @@ export interface GitHubStats {
 export const projectsData: Project[] = [
   {
     id: 1,
+    title: "WebTwin - Virtual Twin Web Companion",
+    description: "Advanced web analysis platform that creates virtual twins of websites, scanning DOM structures, simulating user interactions, and identifying UX optimization opportunities. Full Docker orchestration with real-time analytics.",
+    technologies: ["Next.js", "TypeScript", "Node.js", "Playwright", "Docker", "Tailwind CSS", "Express"],
+    githubUrl: "https://github.com/pashitox/web-twin",
+    demoUrl: "https://github.com/pashitox/web-twin",
+    image: "/images/webtwin.png",
+    metrics: {
+      users: 2847,
+      deploymentTime: "1.2s",
+      modelsDeployed: 3,
+      dataProcessed: "15TB/month",
+      latencyReduction: "65%"
+    }
+  },
+  {
+    id: 2,
+    title: "NexusShop – AI-Powered E-commerce Platform",
+    description: "Full-stack e-commerce platform integrating AI for personalized recommendations, chat-based shopping, and intelligent product discovery. Features multi-auth, Stripe payments, and enterprise-grade security.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "NestJS",
+      "PostgreSQL",
+      "Prisma",
+      "Docker",
+      "Stripe API",
+      "OpenAI API",
+      "Redis",
+      "Tailwind CSS",
+      "Resend",
+      "Google OAuth"
+    ],
+    githubUrl: "https://github.com/pashitox/nexus-shop",
+    demoUrl: "https://nexus-shop.vercel.app",
+    image: "/images/nexus.png",
+    metrics: {
+      users: 2500,
+      modelsDeployed: 3,
+      latencyReduction: "70%",
+      deploymentTime: "1.9s",
+      accuracy: 91.8,
+      dataProcessed: "12TB/month"
+    }
+  },
+  {
+    id: 3,
     title: "Nitro Data Platform",
     description: "Predictive monitoring system for industrial equipment. Full pipeline with Kafka, Spark, and Airflow, plus ML models served via FastAPI.",
     technologies: ["Apache Kafka", "Apache Spark", "Airflow", "FastAPI", "Docker", "PostgreSQL"],
@@ -65,39 +111,9 @@ export const projectsData: Project[] = [
       latencyReduction: "65%",
       sensorsConnected: 2500
     }
-  },{
-  id: 2,
-  title: "NexusShop – AI-Powered E-commerce Platform",
-  description:
-    "Full-stack e-commerce platform integrating AI for personalized recommendations, chat-based shopping, and intelligent product discovery. Features multi-auth, Stripe payments, and enterprise-grade security.",
-  technologies: [
-    "Next.js",
-    "TypeScript",
-    "NestJS",
-    "PostgreSQL",
-    "Prisma",
-    "Docker",
-    "Stripe API",
-    "OpenAI API",
-    "Redis",
-    "Tailwind CSS",
-    "Resend",
-    "Google OAuth"
-  ],
-  githubUrl: "https://github.com/pashitox/nexus-shop",
-  demoUrl: "https://nexus-shop.vercel.app",
-  image: "/images/nexus.png",
-  metrics: {
-    users: 2500,
-    modelsDeployed: 3,
-    latencyReduction: "70%",
-    deploymentTime: "1.9s",
-    accuracy: 91.8,
-    dataProcessed: "12TB/month"
-  }
-},
+  },
   {
-    id: 6,
+    id: 4,
     title: "UrbanNet Smart City Analytics",
     description: "Urban analytics platform with deep learning and interactive dashboards. Processes 2.3TB of data per month.",
     technologies: ["PyTorch", "Docker", "Computer Vision", "Grafana", "TensorFlow"],
@@ -111,9 +127,9 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 3,
+    id: 5,
     title: "Full Stack Portfolio Website",
-    description: "My professional portfolio developed with Next.js and Tailwind CSS, featuring mocked project data, stats, and interactive visualization.",
+    description: "Professional portfolio developed with Next.js and Tailwind CSS, featuring mocked project data, stats, and interactive visualization.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Framer Motion"],
     githubUrl: "https://github.com/pashitox/personal-portfolio",
     demoUrl: "#",
@@ -125,7 +141,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 4,
+    id: 6,
     title: "Satellite Anomaly Detector — ESA Missions",
     description: "Anomaly detection system for ESA missions, integrating multiple data sources and predictive models with SHAP-based explanations.",
     technologies: ["Python 3.9", "Pandas", "NumPy", "Scikit-learn", "XGBoost", "SHAP", "Jupyter Notebook"],
@@ -139,8 +155,8 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 5,
-    title: "DataHub Personal  Portfolio + AI Knowledge Platform",
+    id: 7,
+    title: "DataHub Personal Portfolio + AI Knowledge Platform",
     description: "Full-stack portfolio and AI knowledge platform with JWT authentication, protected routes, dark mode, and responsive design. Built with Next.js and NestJS.",
     technologies: ["Next.js", "NestJS", "TypeScript", "Tailwind CSS", "PostgreSQL", "Redis", "Docker"],
     githubUrl: "https://github.com/pashitox/datahub-platform",
@@ -156,6 +172,14 @@ export const projectsData: Project[] = [
 
 // ---------------- SKILLS ----------------
 export const skillsData: Skill[] = [
+  // 🌐 Full Stack Web & Modern Development
+  { name: "Next.js", level: 92, category: 'web-development' },
+  { name: "TypeScript", level: 90, category: 'web-development' },
+  { name: "React", level: 90, category: 'web-development' },
+  { name: "Node.js / Express", level: 88, category: 'web-development' },
+  { name: "Tailwind CSS", level: 92, category: 'web-development' },
+  { name: "Playwright", level: 85, category: 'web-development' },
+  
   // 🛠️ Data Engineering
   { name: "Apache Spark", level: 95, category: 'data-engineering' },
   { name: "Apache Kafka", level: 90, category: 'data-engineering' },
@@ -163,13 +187,6 @@ export const skillsData: Skill[] = [
   { name: "dbt", level: 85, category: 'data-engineering' },
   { name: "PostgreSQL", level: 90, category: 'data-engineering' },
   { name: "Apache Flink", level: 82, category: 'data-engineering' },
-
-  // 🌐 Full Stack Web
-  { name: "React", level: 90, category: 'web-development' },
-  { name: "Next.js", level: 88, category: 'web-development' },
-  { name: "Node.js / Express", level: 85, category: 'web-development' },
-  { name: "TypeScript", level: 90, category: 'web-development' },
-  { name: "Tailwind CSS", level: 92, category: 'web-development' },
 
   // 🤖 Machine Learning
   { name: "Python", level: 93, category: 'machine-learning' },
@@ -180,7 +197,7 @@ export const skillsData: Skill[] = [
   { name: "Computer Vision", level: 82, category: 'machine-learning' },
 
   // ⚙️ MLOps & Cloud
-  { name: "Docker", level: 88, category: 'mlops' },
+  { name: "Docker", level: 90, category: 'mlops' },
   { name: "Kubernetes", level: 78, category: 'mlops' },
   { name: "MLflow", level: 85, category: 'mlops' },
   { name: "FastAPI", level: 85, category: 'mlops' },
@@ -203,7 +220,6 @@ export const navLinks: NavLink[] = [
   { href: "#dashboard", label: "Dashboard" },
   { href: "#contact", label: "Contact" }
 ];
-
 
 // ---------------- DASHBOARD METRICS ----------------
 export const dashboardStats = {
@@ -261,21 +277,23 @@ export const monthlyVisitors = [
 export const technologyUsage = [
   { name: 'Apache Spark', usage: 95, projects: 12 },
   { name: 'Python', usage: 93, projects: 18 },
-  { name: 'Docker', usage: 88, projects: 15 },
+  { name: 'Next.js', usage: 92, projects: 8 },
+  { name: 'TypeScript', usage: 90, projects: 9 },
+  { name: 'Docker', usage: 90, projects: 15 },
   { name: 'Kafka', usage: 90, projects: 10 },
   { name: 'PostgreSQL', usage: 90, projects: 14 },
   { name: 'PyTorch', usage: 85, projects: 8 },
+  { name: 'Playwright', usage: 85, projects: 3 },
   { name: 'Kubernetes', usage: 78, projects: 6 },
   { name: 'AWS', usage: 75, projects: 7 },
-  { name: 'Next.js', usage: 88, projects: 5 },
   { name: 'NestJS', usage: 85, projects: 3 }
 ];
 
 export const projectCategories = [
   { name: 'Data Engineering', count: 8, color: '#3B82F6' },
   { name: 'Machine Learning', count: 6, color: '#10B981' },
+  { name: 'Web Development', count: 7, color: '#06B6D4' },
   { name: 'MLOps', count: 3, color: '#8B5CF6' },
   { name: 'IoT', count: 2, color: '#F59E0B' },
-  { name: 'Visualization', count: 4, color: '#EC4899' },
-  { name: 'Web Development', count: 5, color: '#06B6D4' }
+  { name: 'Visualization', count: 4, color: '#EC4899' }
 ];
