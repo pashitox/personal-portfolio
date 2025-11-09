@@ -39,7 +39,7 @@ export default function Hero({ setCurrentSection }: HeroProps) {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <MotionH2 className="text-xl sm:text-2xl md:text-3xl mb-4">
-              Full Stack Web Developer & Data/AI Engineer
+              Full Stack Developer & AI/Automation Engineer
             </MotionH2>
           </MotionDiv>
 
@@ -49,9 +49,9 @@ export default function Hero({ setCurrentSection }: HeroProps) {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <MotionP className="text-base sm:text-lg md:text-xl mb-6 mx-auto md:mx-0 leading-relaxed max-w-4xl text-gray-700 dark:text-gray-300">
-              {`I am a Computer Engineer with a Master's in Research and University Teaching (Central University of Chile),
-specialized in Data Engineering and Full Stack Web Application Development.  
-I design and build scalable systems integrating robust backends, interactive frontends, and AI-powered solutions for real-world projects.`}
+              {`Computer Engineer & Master's in Research specialized in Data Engineering and Full Stack Development.  
+I build intelligent systems that integrate modern web applications, AI-powered automation, and scalable data solutions.  
+Expert in Vue.js, React, n8n workflows, and end-to-end project development.`}
             </MotionP>
           </MotionDiv>
 
