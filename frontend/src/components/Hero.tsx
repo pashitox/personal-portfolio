@@ -200,30 +200,45 @@ Expert in Vue.js, React, n8n workflows, and end-to-end project development.`}
           className="relative"
         >
           <div className="relative">
-            <Image
-              src="/images/perfil.jpg"
-              alt="Pashitox Profile Photo"
-              width={400}
-              height={400}
-              className="rounded-2xl border-4 border-blue-500 dark:border-blue-300 object-cover shadow-2xl"
-            />
+            {/* Foto ovalada */}
+            <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-blue-500 dark:border-blue-300 shadow-2xl">
+              <Image
+                src="/images/perfil.jpg"
+                alt="Pashitox Profile Photo"
+                width={400}
+                height={400}
+                className="w-full h-full object-cover scale-110"
+              />
+            </div>
+            
             {/* Efecto de brillo */}
             <motion.div
-              className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/20 to-transparent"
+              className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/20 to-transparent"
               animate={{ opacity: [0.3, 0.6, 0.3] }}
               transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
             />
           </div>
           
-          {/* Badge flotante */}
+          {/* Badge flotante - Data Driven */}
           <motion.div
-            className="absolute -bottom-4 -right-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg"
+            className="absolute -bottom-4 -right-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg border-2 border-white dark:border-gray-800"
             initial={{ scale: 0, rotate: -45 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ delay: 1, type: "spring", stiffness: 200 }}
             whileHover={{ scale: 1.1, rotate: 5 }}
           >
-            🚀 Available
+            📊 Data Driven
+          </motion.div>
+
+          {/* Segundo badge - Results Oriented */}
+          <motion.div
+            className="absolute -top-4 -left-4 bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg border-2 border-white dark:border-gray-800"
+            initial={{ scale: 0, rotate: 45 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ delay: 1.2, type: "spring", stiffness: 200 }}
+            whileHover={{ scale: 1.1, rotate: -5 }}
+          >
+            🎯 Results Oriented
           </motion.div>
         </motion.div>
       </motion.div>
