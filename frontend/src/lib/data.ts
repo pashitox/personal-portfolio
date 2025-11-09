@@ -54,6 +54,35 @@ export interface GitHubStats {
 export const projectsData: Project[] = [
   {
     id: 1,
+    title: "Automated Project Manager - AI Workflow Platform",
+    description: "Complete automation ecosystem with Vue.js frontend and n8n workflow engine. Features real-time task management, AI-powered analysis, multi-channel notifications, and zero traditional backend architecture.",
+    technologies: [
+      "Vue.js 3",
+      "TypeScript",
+      "n8n",
+      "PostgreSQL", 
+      "Docker",
+      "OpenAI API",
+      "Twilio API",
+      "Gmail SMTP",
+      "Pinia",
+      "Element Plus",
+      "Webhooks"
+    ],
+    githubUrl: "https://github.com/pashitox/automated-project-manager",
+    demoUrl: "http://localhost:5173",
+    image: "/images/pro.png",
+    metrics: {
+      users: 18,
+      deploymentTime: "2.1s",
+      modelsDeployed: 2,
+      dataProcessed: "1.2GB/day",
+      latencyReduction: "80%",
+      accuracy: 94.5
+    }
+  },
+  {
+    id: 2,
     title: "WebTwin - Virtual Twin Web Companion",
     description: "Advanced web analysis platform that creates virtual twins of websites, scanning DOM structures, simulating user interactions, and identifying UX optimization opportunities. Full Docker orchestration with real-time analytics.",
     technologies: ["Next.js", "TypeScript", "Node.js", "Playwright", "Docker", "Tailwind CSS", "Express"],
@@ -69,7 +98,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 2,
+    id: 3,
     title: "NexusShop – AI-Powered E-commerce Platform",
     description: "Full-stack e-commerce platform integrating AI for personalized recommendations, chat-based shopping, and intelligent product discovery. Features multi-auth, Stripe payments, and enterprise-grade security.",
     technologies: [
@@ -99,7 +128,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 3,
+    id: 4,
     title: "Nitro Data Platform",
     description: "Predictive monitoring system for industrial equipment. Full pipeline with Kafka, Spark, and Airflow, plus ML models served via FastAPI.",
     technologies: ["Apache Kafka", "Apache Spark", "Airflow", "FastAPI", "Docker", "PostgreSQL"],
@@ -113,7 +142,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 4,
+    id: 5,
     title: "UrbanNet Smart City Analytics",
     description: "Urban analytics platform with deep learning and interactive dashboards. Processes 2.3TB of data per month.",
     technologies: ["PyTorch", "Docker", "Computer Vision", "Grafana", "TensorFlow"],
@@ -127,7 +156,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 5,
+    id: 6,
     title: "Full Stack Portfolio Website",
     description: "Professional portfolio developed with Next.js and Tailwind CSS, featuring mocked project data, stats, and interactive visualization.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Framer Motion"],
@@ -141,7 +170,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 6,
+    id: 7,
     title: "Satellite Anomaly Detector — ESA Missions",
     description: "Anomaly detection system for ESA missions, integrating multiple data sources and predictive models with SHAP-based explanations.",
     technologies: ["Python 3.9", "Pandas", "NumPy", "Scikit-learn", "XGBoost", "SHAP", "Jupyter Notebook"],
@@ -155,7 +184,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 7,
+    id: 8,
     title: "DataHub Personal Portfolio + AI Knowledge Platform",
     description: "Full-stack portfolio and AI knowledge platform with JWT authentication, protected routes, dark mode, and responsive design. Built with Next.js and NestJS.",
     technologies: ["Next.js", "NestJS", "TypeScript", "Tailwind CSS", "PostgreSQL", "Redis", "Docker"],
@@ -176,14 +205,18 @@ export const skillsData: Skill[] = [
   { name: "Next.js", level: 92, category: 'web-development' },
   { name: "TypeScript", level: 90, category: 'web-development' },
   { name: "React", level: 90, category: 'web-development' },
+  { name: "Vue.js 3", level: 88, category: 'web-development' },
   { name: "Node.js / Express", level: 88, category: 'web-development' },
   { name: "Tailwind CSS", level: 92, category: 'web-development' },
   { name: "Playwright", level: 85, category: 'web-development' },
+  { name: "API Integration", level: 90, category: 'web-development' },
   
   // 🛠️ Data Engineering
   { name: "Apache Spark", level: 95, category: 'data-engineering' },
   { name: "Apache Kafka", level: 90, category: 'data-engineering' },
   { name: "Apache Airflow", level: 88, category: 'data-engineering' },
+  { name: "Workflow Orchestration", level: 87, category: 'data-engineering' },
+  { name: "Real-time Systems", level: 84, category: 'data-engineering' },
   { name: "dbt", level: 85, category: 'data-engineering' },
   { name: "PostgreSQL", level: 90, category: 'data-engineering' },
   { name: "Apache Flink", level: 82, category: 'data-engineering' },
@@ -198,6 +231,7 @@ export const skillsData: Skill[] = [
 
   // ⚙️ MLOps & Cloud
   { name: "Docker", level: 90, category: 'mlops' },
+  { name: "n8n Automation", level: 85, category: 'mlops' },
   { name: "Kubernetes", level: 78, category: 'mlops' },
   { name: "MLflow", level: 85, category: 'mlops' },
   { name: "FastAPI", level: 85, category: 'mlops' },
@@ -226,12 +260,12 @@ export const dashboardStats = {
   totalVisitors: 2847,
   uniqueVisitors: 1956,
   returningVisitors: 891,
-  projectsCompleted: 18,
+  projectsCompleted: 19,
   happyClients: 23,
-  codeCommits: 1248,
-  linesOfCode: 156432,
-  bugsFixed: 167,
-  coffeeCups: 892
+  codeCommits: 1342,
+  linesOfCode: 167890,
+  bugsFixed: 178,
+  coffeeCups: 945
 };
 
 export const visitorStats: VisitorStats = {
@@ -246,16 +280,16 @@ export const githubStats: GitHubStats = {
   repositories: 27,
   stars: 156,
   forks: 78,
-  contributions: 1248
+  contributions: 1342
 };
 
 export const projectMetrics = {
-  totalProjects: 18,
-  activeProjects: 6,
+  totalProjects: 19,
+  activeProjects: 7,
   completedProjects: 12,
-  successRate: 94.7,
-  totalUsers: 1750,
-  dataProcessed: "45TB"
+  successRate: 95.2,
+  totalUsers: 1768,
+  dataProcessed: "46.2TB"
 };
 
 // ---------------- VISUAL DATA ----------------
@@ -280,8 +314,10 @@ export const technologyUsage = [
   { name: 'Next.js', usage: 92, projects: 8 },
   { name: 'TypeScript', usage: 90, projects: 9 },
   { name: 'Docker', usage: 90, projects: 15 },
-  { name: 'Kafka', usage: 90, projects: 10 },
   { name: 'PostgreSQL', usage: 90, projects: 14 },
+  { name: 'Vue.js 3', usage: 88, projects: 1 },
+  { name: 'n8n Automation', usage: 85, projects: 1 },
+  { name: 'Kafka', usage: 90, projects: 10 },
   { name: 'PyTorch', usage: 85, projects: 8 },
   { name: 'Playwright', usage: 85, projects: 3 },
   { name: 'Kubernetes', usage: 78, projects: 6 },
@@ -292,8 +328,8 @@ export const technologyUsage = [
 export const projectCategories = [
   { name: 'Data Engineering', count: 8, color: '#3B82F6' },
   { name: 'Machine Learning', count: 6, color: '#10B981' },
-  { name: 'Web Development', count: 7, color: '#06B6D4' },
-  { name: 'MLOps', count: 3, color: '#8B5CF6' },
+  { name: 'Web Development', count: 8, color: '#06B6D4' },
+  { name: 'MLOps', count: 4, color: '#8B5CF6' },
   { name: 'IoT', count: 2, color: '#F59E0B' },
   { name: 'Visualization', count: 4, color: '#EC4899' }
 ];
