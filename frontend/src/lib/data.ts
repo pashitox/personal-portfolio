@@ -71,7 +71,7 @@ export const projectsData: Project[] = [
     ],
     githubUrl: "https://github.com/pashitox/automated-project-manager",
     demoUrl: "http://localhost:5173",
-    image: "/images/pro.png",
+    image: "/images/3.jpg",
     metrics: {
       users: 18,
       deploymentTime: "2.1s",
