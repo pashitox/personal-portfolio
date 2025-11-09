@@ -31,67 +31,63 @@ export default function About() {
             </h3>
             <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
               Computer Engineer with a Master's Degree in Research and University Teaching, 
-              specializing in <strong className="text-blue-600 dark:text-blue-400">Data Engineering</strong> 
-              and <strong className="text-blue-600 dark:text-blue-400">Full-Stack Web Development</strong>. 
-              I bridge the gap between data infrastructure and modern web applications, creating 
-              intelligent systems that solve real-world problems.
+              specializing in <strong className="text-gray-900 dark:text-white">Data Engineering & Full-Stack Development</strong>. 
+              I bridge the gap between complex data systems and modern web applications, 
+              creating intelligent solutions that deliver real business value.
             </p>
 
             <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
-              My passion lies in building <strong className="text-green-600 dark:text-green-400">end-to-end intelligent systems</strong> 
-              that seamlessly integrate real-time data processing, machine learning, and professional 
-              web interfaces. I specialize in workflow automation and AI-powered applications that 
-              deliver measurable business value.
+              My expertise lies in building <strong className="text-gray-900 dark:text-white">end-to-end intelligent systems</strong> 
+              that integrate real-time data processing, machine learning workflows, 
+              and professional web applications with seamless user experiences.
             </p>
 
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg mb-6 border border-gray-200 dark:border-gray-700 shadow-sm">
               <h4 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
-                Technical Expertise:
+                Core Technical Expertise:
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 text-gray-700 dark:text-gray-300">
                 <div>
-                  <strong className="text-blue-600 dark:text-blue-400">Data & AI Engineering:</strong>
+                  <strong className="text-gray-900 dark:text-white">Data & AI Engineering:</strong>
                   <ul className="list-disc list-inside mt-2 ml-4 space-y-1 text-sm md:text-base">
-                    <li>Apache Spark & Kafka</li>
-                    <li>Apache Airflow</li>
-                    <li>PostgreSQL</li>
-                    <li>Real-time Processing</li>
-                    <li>ML Pipelines</li>
+                    <li>Apache Spark & Airflow</li>
+                    <li>Real-time Data Pipelines</li>
+                    <li>Machine Learning Systems</li>
+                    <li>PostgreSQL & Data Modeling</li>
                     <li>Workflow Automation</li>
+                    <li>Predictive Analytics</li>
                   </ul>
                 </div>
                 <div>
-                  <strong className="text-green-600 dark:text-green-400">Web & Automation:</strong>
+                  <strong className="text-gray-900 dark:text-white">Full-Stack Development:</strong>
                   <ul className="list-disc list-inside mt-2 ml-4 space-y-1 text-sm md:text-base">
-                    <li>Next.js & React</li>
-                    <li>Vue.js 3</li>
-                    <li>n8n Automation</li>
-                    <li>TypeScript</li>
-                    <li>REST/GraphQL APIs</li>
-                    <li>AI Integration</li>
+                    <li>Next.js & React Ecosystem</li>
+                    <li>Vue.js & Modern Frontend</li>
+                    <li>TypeScript & Node.js</li>
+                    <li>REST & GraphQL APIs</li>
+                    <li>Real-time Applications</li>
+                    <li>Performance Optimization</li>
                   </ul>
                 </div>
                 <div>
-                  <strong className="text-purple-600 dark:text-purple-400">MLOps & Cloud:</strong>
+                  <strong className="text-gray-900 dark:text-white">MLOps & Automation:</strong>
                   <ul className="list-disc list-inside mt-2 ml-4 space-y-1 text-sm md:text-base">
-                    <li>Docker & Kubernetes</li>
-                    <li>AWS & Cloud Deploy</li>
-                    <li>MLflow & FastAPI</li>
+                    <li>n8n Workflow Automation</li>
+                    <li>Docker & Containerization</li>
+                    <li>ML Model Deployment</li>
                     <li>CI/CD Pipelines</li>
+                    <li>Cloud Infrastructure</li>
                     <li>Monitoring & Analytics</li>
-                    <li>Scalable Architecture</li>
                   </ul>
                 </div>
               </div>
             </div>
 
             <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg">
-              <strong className="text-blue-600 dark:text-blue-400">Currently seeking</strong> opportunities as 
-              <strong className="text-green-600 dark:text-green-400"> Full-Stack Developer</strong>, 
-              <strong className="text-purple-600 dark:text-purple-400"> Automation Engineer</strong>, or 
-              <strong className="text-blue-600 dark:text-blue-400"> AI Integration Specialist</strong>, 
-              where I can leverage my multidisciplinary expertise to build innovative solutions 
-              and drive technological transformation.
+              <strong className="text-gray-900 dark:text-white">Seeking opportunities</strong> as a 
+              <strong className="text-gray-900 dark:text-white"> Full-Stack Developer, AI Engineer, or Data Architect</strong>, 
+              where I can leverage my multidisciplinary expertise to build intelligent, 
+              scalable systems that solve complex business challenges.
             </p>
           </motion.div>
 
@@ -128,13 +124,13 @@ export default function About() {
 
             <div className="mt-6 md:mt-8 bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
               <h4 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
-                Automation & AI Stack:
+                Production Technologies:
               </h4>
               <div className="flex flex-wrap gap-2">
                 {[
-                  'n8n Workflows', 'OpenAI API', 'FastAPI', 'MLflow', 
-                  'Docker', 'Kubernetes', 'Grafana', 'Real-time Analytics',
-                  'Webhooks', 'Twilio API', 'Workflow Automation'
+                  'FastAPI', 'MLflow', 'Docker', 'Kubernetes', 
+                  'Terraform', 'AWS Cloud', 'Grafana', 
+                  'Streamlit', 'n8n Automation', 'OpenAI API'
                 ].map((tech) => (
                   <span 
                     key={tech} 
