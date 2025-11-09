@@ -27,68 +27,71 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
-              My Experience
+              My Journey
             </h3>
             <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
-              Computer Engineer with a Master&apos;s Degree in Research and University Teaching (Universidad Central de Chile), 
-              specialized in <strong className="text-gray-900 dark:text-white">Data Engineering</strong> 
-              and currently focused on <strong className="text-gray-900 dark:text-white">Full-Stack Web Development</strong>. 
-              I combine experience in data architecture, MLOps, and machine learning with strong skills to build 
-              modern, scalable, and optimized web applications.
+              Computer Engineer with a Master's Degree in Research and University Teaching, 
+              specializing in <strong className="text-blue-600 dark:text-blue-400">Data Engineering</strong> 
+              and <strong className="text-blue-600 dark:text-blue-400">Full-Stack Web Development</strong>. 
+              I bridge the gap between data infrastructure and modern web applications, creating 
+              intelligent systems that solve real-world problems.
             </p>
 
             <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
-              My expertise lies in building <strong className="text-gray-900 dark:text-white">end-to-end systems</strong> 
-              that seamlessly integrate real-time data ingestion, distributed processing, machine learning, 
-              and professional web application development.
+              My passion lies in building <strong className="text-green-600 dark:text-green-400">end-to-end intelligent systems</strong> 
+              that seamlessly integrate real-time data processing, machine learning, and professional 
+              web interfaces. I specialize in workflow automation and AI-powered applications that 
+              deliver measurable business value.
             </p>
 
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg mb-6 border border-gray-200 dark:border-gray-700 shadow-sm">
               <h4 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
-                Main Technical Stack:
+                Technical Expertise:
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 text-gray-700 dark:text-gray-300">
                 <div>
-                  <strong className="text-gray-900 dark:text-white">Data Engineering:</strong>
+                  <strong className="text-blue-600 dark:text-blue-400">Data & AI Engineering:</strong>
                   <ul className="list-disc list-inside mt-2 ml-4 space-y-1 text-sm md:text-base">
+                    <li>Apache Spark & Kafka</li>
                     <li>Apache Airflow</li>
-                    <li>Apache Spark</li>
-                    <li>Apache Kafka</li>
-                    <li>dbt</li>
                     <li>PostgreSQL</li>
-                    <li>Docker</li>
+                    <li>Real-time Processing</li>
+                    <li>ML Pipelines</li>
+                    <li>Workflow Automation</li>
                   </ul>
                 </div>
                 <div>
-                  <strong className="text-gray-900 dark:text-white">Machine Learning / MLOps:</strong>
+                  <strong className="text-green-600 dark:text-green-400">Web & Automation:</strong>
                   <ul className="list-disc list-inside mt-2 ml-4 space-y-1 text-sm md:text-base">
-                    <li>PyTorch</li>
-                    <li>Scikit-learn</li>
-                    <li>XGBoost</li>
-                    <li>MLflow</li>
-                    <li>SHAP</li>
-                    <li>Computer Vision</li>
+                    <li>Next.js & React</li>
+                    <li>Vue.js 3</li>
+                    <li>n8n Automation</li>
+                    <li>TypeScript</li>
+                    <li>REST/GraphQL APIs</li>
+                    <li>AI Integration</li>
                   </ul>
                 </div>
                 <div>
-                  <strong className="text-gray-900 dark:text-white">Web Development:</strong>
+                  <strong className="text-purple-600 dark:text-purple-400">MLOps & Cloud:</strong>
                   <ul className="list-disc list-inside mt-2 ml-4 space-y-1 text-sm md:text-base">
-                    <li>Next.js 14, React</li>
-                    <li>Tailwind CSS, Framer Motion</li>
-                    <li>Node.js, Express</li>
-                    <li>REST APIs, GraphQL</li>
-                    <li>Testing with Jest and Cypress</li>
-                    <li>CI/CD with GitHub Actions</li>
+                    <li>Docker & Kubernetes</li>
+                    <li>AWS & Cloud Deploy</li>
+                    <li>MLflow & FastAPI</li>
+                    <li>CI/CD Pipelines</li>
+                    <li>Monitoring & Analytics</li>
+                    <li>Scalable Architecture</li>
                   </ul>
                 </div>
               </div>
             </div>
 
             <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg">
-              <strong className="text-gray-900 dark:text-white">Open to</strong> roles such as 
-              <strong className="text-gray-900 dark:text-white"> Full-Stack Web Developer, Senior Data Engineer, MLOps Engineer, or Data Architect</strong>, 
-              where I can leverage my multidisciplinary technical skills to solve complex problems 
-              and lead high-impact initiatives.
+              <strong className="text-blue-600 dark:text-blue-400">Currently seeking</strong> opportunities as 
+              <strong className="text-green-600 dark:text-green-400"> Full-Stack Developer</strong>, 
+              <strong className="text-purple-600 dark:text-purple-400"> Automation Engineer</strong>, or 
+              <strong className="text-blue-600 dark:text-blue-400"> AI Integration Specialist</strong>, 
+              where I can leverage my multidisciplinary expertise to build innovative solutions 
+              and drive technological transformation.
             </p>
           </motion.div>
 
@@ -99,7 +102,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
-              My Technical Skills
+              Technical Proficiency
             </h3>
             <div className="space-y-3 md:space-y-4">
               {skillsData.map((skill, index) => (
@@ -125,13 +128,13 @@ export default function About() {
 
             <div className="mt-6 md:mt-8 bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
               <h4 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
-                MLOps & Cloud:
+                Automation & AI Stack:
               </h4>
               <div className="flex flex-wrap gap-2">
                 {[
-                  'FastAPI', 'MLflow', 'Docker', 'Kubernetes', 
-                  'Terraform', 'MinIO/S3', 'Grafana', 
-                  'Streamlit', 'Power BI', 'Plotly'
+                  'n8n Workflows', 'OpenAI API', 'FastAPI', 'MLflow', 
+                  'Docker', 'Kubernetes', 'Grafana', 'Real-time Analytics',
+                  'Webhooks', 'Twilio API', 'Workflow Automation'
                 ].map((tech) => (
                   <span 
                     key={tech} 
@@ -148,4 +151,3 @@ export default function About() {
     </section>
   );
 }
-
