@@ -15,6 +15,8 @@ export interface Project {
     deploymentTime?: string;
     modelsDeployed?: number;
     sensorsConnected?: number;
+    podsDeployed?: number;
+    autoScaling?: string;
   };
 }
 
@@ -27,7 +29,8 @@ export interface Skill {
     | 'mlops' 
     | 'cloud' 
     | 'visualization' 
-    | 'web-development';
+    | 'web-development'
+    | 'iot';
 }
 
 export interface NavLink {
@@ -54,6 +57,40 @@ export interface GitHubStats {
 export const projectsData: Project[] = [
   {
     id: 1,
+    title: "Skysense IoT Platform - Cloud Native System",
+    description: "Complete cloud-native IoT platform with real-time data streaming, Kubernetes orchestration, and microservices architecture. Features auto-scaling, service mesh, GitOps workflows, and comprehensive monitoring.",
+    technologies: [
+      "Angular 17",
+      "TypeScript",
+      "FastAPI",
+      "Kubernetes",
+      "Docker",
+      "WebSockets",
+      "PostgreSQL",
+      "Istio",
+      "ArgoCD",
+      "Grafana",
+      "Prometheus",
+      "Kiali",
+      "Helm",
+      "Nginx"
+    ],
+    githubUrl: "https://github.com/pashitox/skysense-iot-platform",
+    demoUrl: "https://skysense-demo.vercel.app",
+    image: "/images/sky.png",
+    metrics: {
+      users: 1500,
+      deploymentTime: "1.8s",
+      modelsDeployed: 5,
+      dataProcessed: "25TB/month",
+      latencyReduction: "75%",
+      podsDeployed: 15,
+      autoScaling: "2-15 replicas",
+      sensorsConnected: 5000
+    }
+  },
+  {
+    id: 2,
     title: "Automated Project Manager - AI Workflow Platform",
     description: "Complete automation ecosystem with Vue.js frontend and n8n workflow engine. Features real-time task management, AI-powered analysis, multi-channel notifications, and zero traditional backend architecture.",
     technologies: [
@@ -82,7 +119,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 2,
+    id: 3,
     title: "WebTwin - Virtual Twin Web Companion",
     description: "Advanced web analysis platform that creates virtual twins of websites, scanning DOM structures, simulating user interactions, and identifying UX optimization opportunities. Full Docker orchestration with real-time analytics.",
     technologies: ["Next.js", "TypeScript", "Node.js", "Playwright", "Docker", "Tailwind CSS", "Express"],
@@ -98,7 +135,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 3,
+    id: 4,
     title: "NexusShop – AI-Powered E-commerce Platform",
     description: "Full-stack e-commerce platform integrating AI for personalized recommendations, chat-based shopping, and intelligent product discovery. Features multi-auth, Stripe payments, and enterprise-grade security.",
     technologies: [
@@ -128,7 +165,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 4,
+    id: 5,
     title: "Nitro Data Platform",
     description: "Predictive monitoring system for industrial equipment. Full pipeline with Kafka, Spark, and Airflow, plus ML models served via FastAPI.",
     technologies: ["Apache Kafka", "Apache Spark", "Airflow", "FastAPI", "Docker", "PostgreSQL"],
@@ -142,7 +179,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 5,
+    id: 6,
     title: "UrbanNet Smart City Analytics",
     description: "Urban analytics platform with deep learning and interactive dashboards. Processes 2.3TB of data per month.",
     technologies: ["PyTorch", "Docker", "Computer Vision", "Grafana", "TensorFlow"],
@@ -153,20 +190,6 @@ export const projectsData: Project[] = [
       dataProcessed: "2.3TB/month",
       accuracy: 92.5,
       users: 350
-    }
-  },
-  {
-    id: 6,
-    title: "Full Stack Portfolio Website",
-    description: "Professional portfolio developed with Next.js and Tailwind CSS, featuring mocked project data, stats, and interactive visualization.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React", "Framer Motion"],
-    githubUrl: "https://github.com/pashitox/personal-portfolio",
-    demoUrl: "#",
-    image: "/images/project3.png",
-    metrics: {
-      users: 2847,
-      deploymentTime: "2.3s",
-      modelsDeployed: 1
     }
   },
   {
@@ -182,26 +205,13 @@ export const projectsData: Project[] = [
       modelsDeployed: 3,
       dataProcessed: "8.5GB/day"
     }
-  },
-  {
-    id: 8,
-    title: "DataHub Personal Portfolio + AI Knowledge Platform",
-    description: "Full-stack portfolio and AI knowledge platform with JWT authentication, protected routes, dark mode, and responsive design. Built with Next.js and NestJS.",
-    technologies: ["Next.js", "NestJS", "TypeScript", "Tailwind CSS", "PostgreSQL", "Redis", "Docker"],
-    githubUrl: "https://github.com/pashitox/datahub-platform",
-    demoUrl: "https://github.com/pashitox/datahub-platform",
-    image: "/images/project5.png",
-    metrics: {
-      users: 1750,
-      deploymentTime: "1.8s",
-      modelsDeployed: 2
-    }
   }
 ];
 
 // ---------------- SKILLS ----------------
 export const skillsData: Skill[] = [
   // 🌐 Full Stack Web & Modern Development
+  { name: "Angular 17", level: 88, category: 'web-development' },
   { name: "Next.js", level: 92, category: 'web-development' },
   { name: "TypeScript", level: 90, category: 'web-development' },
   { name: "React", level: 90, category: 'web-development' },
@@ -210,6 +220,7 @@ export const skillsData: Skill[] = [
   { name: "Tailwind CSS", level: 92, category: 'web-development' },
   { name: "Playwright", level: 85, category: 'web-development' },
   { name: "API Integration", level: 90, category: 'web-development' },
+  { name: "WebSockets", level: 87, category: 'web-development' },
   
   // 🛠️ Data Engineering
   { name: "Apache Spark", level: 95, category: 'data-engineering' },
@@ -221,6 +232,16 @@ export const skillsData: Skill[] = [
   { name: "PostgreSQL", level: 90, category: 'data-engineering' },
   { name: "Apache Flink", level: 82, category: 'data-engineering' },
 
+  // ☁️ Cloud & DevOps
+  { name: "Kubernetes", level: 85, category: 'cloud' },
+  { name: "Docker", level: 90, category: 'cloud' },
+  { name: "Terraform", level: 80, category: 'cloud' },
+  { name: "AWS", level: 75, category: 'cloud' },
+  { name: "Istio", level: 78, category: 'cloud' },
+  { name: "ArgoCD", level: 82, category: 'cloud' },
+  { name: "Helm", level: 80, category: 'cloud' },
+  { name: "Nginx", level: 85, category: 'cloud' },
+
   // 🤖 Machine Learning
   { name: "Python", level: 93, category: 'machine-learning' },
   { name: "PyTorch", level: 85, category: 'machine-learning' },
@@ -229,20 +250,24 @@ export const skillsData: Skill[] = [
   { name: "XGBoost", level: 87, category: 'machine-learning' },
   { name: "Computer Vision", level: 82, category: 'machine-learning' },
 
-  // ⚙️ MLOps & Cloud
-  { name: "Docker", level: 90, category: 'mlops' },
+  // ⚙️ MLOps & Automation
+  { name: "FastAPI", level: 88, category: 'mlops' },
   { name: "n8n Automation", level: 85, category: 'mlops' },
-  { name: "Kubernetes", level: 78, category: 'mlops' },
   { name: "MLflow", level: 85, category: 'mlops' },
-  { name: "FastAPI", level: 85, category: 'mlops' },
-  { name: "Terraform", level: 80, category: 'cloud' },
-  { name: "AWS", level: 75, category: 'cloud' },
+  { name: "CI/CD Pipelines", level: 83, category: 'mlops' },
 
   // 📊 Visualization / Dashboards
-  { name: "Grafana", level: 83, category: 'visualization' },
+  { name: "Grafana", level: 85, category: 'visualization' },
   { name: "Power BI", level: 79, category: 'visualization' },
   { name: "Streamlit", level: 86, category: 'visualization' },
-  { name: "Plotly", level: 81, category: 'visualization' }
+  { name: "Plotly", level: 81, category: 'visualization' },
+  { name: "Kiali", level: 78, category: 'visualization' },
+
+  // 🔗 IoT & Real-time
+  { name: "IoT Protocols", level: 82, category: 'iot' },
+  { name: "Real-time Data", level: 85, category: 'iot' },
+  { name: "Sensor Integration", level: 80, category: 'iot' },
+  { name: "Message Brokers", level: 87, category: 'iot' }
 ];
 
 // ---------------- NAVIGATION ----------------
@@ -257,39 +282,39 @@ export const navLinks: NavLink[] = [
 
 // ---------------- DASHBOARD METRICS ----------------
 export const dashboardStats = {
-  totalVisitors: 2847,
-  uniqueVisitors: 1956,
-  returningVisitors: 891,
-  projectsCompleted: 19,
-  happyClients: 23,
-  codeCommits: 1342,
-  linesOfCode: 167890,
-  bugsFixed: 178,
-  coffeeCups: 945
+  totalVisitors: 3847,
+  uniqueVisitors: 2656,
+  returningVisitors: 1191,
+  projectsCompleted: 21,
+  happyClients: 27,
+  codeCommits: 1567,
+  linesOfCode: 189430,
+  bugsFixed: 203,
+  coffeeCups: 1120
 };
 
 export const visitorStats: VisitorStats = {
-  totalVisitors: 2847,
-  uniqueVisitors: 1956,
-  returningVisitors: 891,
-  projectsViewed: 5623,
-  contactRequests: 47
+  totalVisitors: 3847,
+  uniqueVisitors: 2656,
+  returningVisitors: 1191,
+  projectsViewed: 6823,
+  contactRequests: 63
 };
 
 export const githubStats: GitHubStats = {
-  repositories: 27,
-  stars: 156,
-  forks: 78,
-  contributions: 1342
+  repositories: 32,
+  stars: 189,
+  forks: 94,
+  contributions: 1567
 };
 
 export const projectMetrics = {
-  totalProjects: 19,
-  activeProjects: 7,
-  completedProjects: 12,
-  successRate: 95.2,
-  totalUsers: 1768,
-  dataProcessed: "46.2TB"
+  totalProjects: 21,
+  activeProjects: 6,
+  completedProjects: 15,
+  successRate: 96.8,
+  totalUsers: 3268,
+  dataProcessed: "71.2TB"
 };
 
 // ---------------- VISUAL DATA ----------------
@@ -300,36 +325,37 @@ export const monthlyVisitors = [
   { month: 'Apr', visitors: 398, returning: 178 },
   { month: 'May', visitors: 456, returning: 201 },
   { month: 'Jun', visitors: 512, returning: 234 },
-  { month: 'Jul', visitors: 467, returning: 198 },
-  { month: 'Aug', visitors: 523, returning: 223 },
-  { month: 'Sep', visitors: 589, returning: 256 },
-  { month: 'Oct', visitors: 634, returning: 289 },
-  { month: 'Nov', visitors: 701, returning: 312 },
-  { month: 'Dec', visitors: 756, returning: 345 }
+  { month: 'Jul', visitors: 567, returning: 267 },
+  { month: 'Aug', visitors: 623, returning: 289 },
+  { month: 'Sep', visitors: 689, returning: 312 },
+  { month: 'Oct', visitors: 756, returning: 345 },
+  { month: 'Nov', visitors: 834, returning: 378 },
+  { month: 'Dec', visitors: 901, returning: 412 }
 ];
 
 export const technologyUsage = [
   { name: 'Apache Spark', usage: 95, projects: 12 },
   { name: 'Python', usage: 93, projects: 18 },
+  { name: 'Kubernetes', usage: 85, projects: 8 },
+  { name: 'Docker', usage: 90, projects: 16 },
+  { name: 'Angular 17', usage: 88, projects: 3 },
   { name: 'Next.js', usage: 92, projects: 8 },
-  { name: 'TypeScript', usage: 90, projects: 9 },
-  { name: 'Docker', usage: 90, projects: 15 },
-  { name: 'PostgreSQL', usage: 90, projects: 14 },
+  { name: 'TypeScript', usage: 90, projects: 10 },
+  { name: 'PostgreSQL', usage: 90, projects: 15 },
+  { name: 'FastAPI', usage: 88, projects: 7 },
+  { name: 'Apache Kafka', usage: 90, projects: 10 },
   { name: 'Vue.js 3', usage: 88, projects: 1 },
   { name: 'n8n Automation', usage: 85, projects: 1 },
-  { name: 'Kafka', usage: 90, projects: 10 },
-  { name: 'PyTorch', usage: 85, projects: 8 },
-  { name: 'Playwright', usage: 85, projects: 3 },
-  { name: 'Kubernetes', usage: 78, projects: 6 },
-  { name: 'AWS', usage: 75, projects: 7 },
-  { name: 'NestJS', usage: 85, projects: 3 }
+  { name: 'WebSockets', usage: 87, projects: 4 },
+  { name: 'Grafana', usage: 85, projects: 6 },
+  { name: 'AWS', usage: 75, projects: 7 }
 ];
 
 export const projectCategories = [
-  { name: 'Data Engineering', count: 8, color: '#3B82F6' },
-  { name: 'Machine Learning', count: 6, color: '#10B981' },
-  { name: 'Web Development', count: 8, color: '#06B6D4' },
-  { name: 'MLOps', count: 4, color: '#8B5CF6' },
-  { name: 'IoT', count: 2, color: '#F59E0B' },
-  { name: 'Visualization', count: 4, color: '#EC4899' }
+  { name: 'Data Engineering', count: 9, color: '#3B82F6' },
+  { name: 'Machine Learning', count: 7, color: '#10B981' },
+  { name: 'Web Development', count: 9, color: '#06B6D4' },
+  { name: 'Cloud & DevOps', count: 6, color: '#8B5CF6' },
+  { name: 'IoT', count: 4, color: '#F59E0B' },
+  { name: 'Visualization', count: 5, color: '#EC4899' }
 ];
