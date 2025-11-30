@@ -31,16 +31,15 @@ export default function About() {
             </h3>
             <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
               Computer Engineer with a Master&apos;s Degree in Research and University Teaching (Universidad Central de Chile), 
-              specialized in <strong className="text-gray-900 dark:text-white">Data Engineering & AI Automation</strong> 
-              and currently focused on <strong className="text-gray-900 dark:text-white">Full-Stack Web Development</strong>. 
-              I combine expertise in data architecture, MLOps, and intelligent automation with modern web development 
-              to build scalable, AI-powered applications.
+              specialized in <strong className="text-gray-900 dark:text-white">Multi-Agent AI Systems & Full-Stack Development</strong>. 
+              I combine expertise in autonomous AI architectures, semantic RAG, and intelligent automation with modern web development 
+              to build self-improving, AI-powered applications.
             </p>
 
             <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
-              My expertise lies in building <strong className="text-gray-900 dark:text-white">intelligent end-to-end systems</strong> 
-              that integrate real-time data processing, workflow automation, machine learning, 
-              and professional web application development with modern frameworks.
+              My expertise lies in building <strong className="text-gray-900 dark:text-white">autonomous AI systems</strong> 
+              with multi-agent architectures that reason, critique, and optimize responses through intelligent feedback loops. 
+              I focus on creating systems that don&apos;t just answer—they understand, reflect, and improve autonomously.
             </p>
 
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg mb-6 border border-gray-200 dark:border-gray-700 shadow-sm">
@@ -49,36 +48,36 @@ export default function About() {
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 text-gray-700 dark:text-gray-300">
                 <div>
-                  <strong className="text-gray-900 dark:text-white">Data Engineering:</strong>
+                  <strong className="text-gray-900 dark:text-white">AI & Multi-Agent Systems:</strong>
                   <ul className="list-disc list-inside mt-2 ml-4 space-y-1 text-sm md:text-base">
-                    <li>Apache Airflow</li>
-                    <li>Apache Spark</li>
-                    <li>Apache Kafka</li>
-                    <li>dbt</li>
+                    <li>Multi-Agent Architecture</li>
+                    <li>FAISS Vector Search</li>
+                    <li>Semantic RAG</li>
+                    <li>Autonomous AI</li>
+                    <li>LLM Integration</li>
+                    <li>Self-Improving Systems</li>
+                  </ul>
+                </div>
+                <div>
+                  <strong className="text-gray-900 dark:text-white">Full Stack Development:</strong>
+                  <ul className="list-disc list-inside mt-2 ml-4 space-y-1 text-sm md:text-base">
+                    <li>Next.js 15, React</li>
+                    <li>TypeScript, Vue.js 3</li>
+                    <li>FastAPI, Node.js</li>
+                    <li>WebSockets</li>
                     <li>PostgreSQL</li>
-                    <li>Docker</li>
+                    <li>Real-time Dashboards</li>
                   </ul>
                 </div>
                 <div>
-                  <strong className="text-gray-900 dark:text-white">Machine Learning / MLOps:</strong>
+                  <strong className="text-gray-900 dark:text-white">Cloud & DevOps:</strong>
                   <ul className="list-disc list-inside mt-2 ml-4 space-y-1 text-sm md:text-base">
-                    <li>PyTorch</li>
-                    <li>Scikit-learn</li>
-                    <li>XGBoost</li>
-                    <li>MLflow</li>
-                    <li>SHAP</li>
-                    <li>Computer Vision</li>
-                  </ul>
-                </div>
-                <div>
-                  <strong className="text-gray-900 dark:text-white">Web Development:</strong>
-                  <ul className="list-disc list-inside mt-2 ml-4 space-y-1 text-sm md:text-base">
-                    <li>Next.js 14, React</li>
-                    <li>Vue.js 3, TypeScript</li>
-                    <li>Node.js, Express</li>
-                    <li>REST APIs, GraphQL</li>
-                    <li>n8n Automation</li>
-                    <li>CI/CD with GitHub Actions</li>
+                    <li>Docker, Kubernetes</li>
+                    <li>AWS Lambda</li>
+                    <li>CI/CD Pipelines</li>
+                    <li>Microservices</li>
+                    <li>Production Monitoring</li>
+                    <li>Auto-scaling Systems</li>
                   </ul>
                 </div>
               </div>
@@ -86,9 +85,8 @@ export default function About() {
 
             <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg">
               <strong className="text-gray-900 dark:text-white">Open to</strong> roles such as 
-              <strong className="text-gray-900 dark:text-white"> Full-Stack Web Developer, AI Engineer, MLOps Engineer, or Automation Specialist</strong>, 
-              where I can leverage my multidisciplinary technical skills to build intelligent systems 
-              and lead high-impact initiatives.
+              <strong className="text-gray-900 dark:text-white"> Full Stack AI Engineer, AI Systems Architect, Multi-Agent AI Developer, or Autonomous Systems Engineer</strong>, 
+              where I can leverage my expertise in building self-improving AI systems and cutting-edge web applications.
             </p>
           </motion.div>
 
@@ -125,17 +123,17 @@ export default function About() {
 
             <div className="mt-6 md:mt-8 bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
               <h4 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4">
-                MLOps & Automation:
+                AI & Autonomous Systems:
               </h4>
               <div className="flex flex-wrap gap-2">
                 {[
-                  'FastAPI', 'MLflow', 'Docker', 'Kubernetes', 
-                  'n8n Workflows', 'OpenAI API', 'Grafana', 
-                  'Streamlit', 'Twilio API', 'Gmail SMTP'
+                  'Multi-Agent Architecture', 'FAISS Vector DB', 'Semantic RAG', 
+                  'Autonomous AI', 'Self-Improving Systems', 'Real-time Agent Monitoring',
+                  'Quality Scoring', 'Agentic Feedback Loops', 'WebSockets', 'Hugging Face'
                 ].map((tech) => (
                   <span 
                     key={tech} 
-                    className="bg-blue-100 dark:bg-blue-500/20 text-blue-800 dark:text-blue-300 px-2 md:px-3 py-1 rounded text-xs md:text-sm"
+                    className="bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300 px-2 md:px-3 py-1 rounded text-xs md:text-sm"
                   >
                     {tech}
                   </span>
