@@ -17,6 +17,10 @@ export interface Project {
     sensorsConnected?: number;
     podsDeployed?: number;
     autoScaling?: string;
+    pipelineSuccess?: number;
+    searchTime?: string;
+    qualityScore?: number;
+    agentCount?: number;
   };
 }
 
@@ -30,7 +34,8 @@ export interface Skill {
     | 'cloud' 
     | 'visualization' 
     | 'web-development'
-    | 'iot';
+    | 'iot'
+    | 'ai-systems';
 }
 
 export interface NavLink {
@@ -57,6 +62,39 @@ export interface GitHubStats {
 export const projectsData: Project[] = [
   {
     id: 1,
+    title: "GENESIS AI - Self-Improving Autonomous Chat Engine",
+    description: "World's first self-improving chatbot with multi-agent architecture. Features 4 specialized agents (RAG, Reasoner, Critic, Improver) that analyze, critique and optimize responses autonomously through agentic feedback loops.",
+    technologies: [
+      "Next.js 15",
+      "TypeScript",
+      "FastAPI",
+      "Python",
+      "FAISS",
+      "Hugging Face",
+      "Sentence Transformers",
+      "WebSockets",
+      "Docker",
+      "AWS Lambda",
+      "Tailwind CSS",
+      "PostgreSQL"
+    ],
+    githubUrl: "https://github.com/pashitox/genesis-ai",
+    demoUrl: "https://github.com/pashitox/genesis-ai",
+    image: "/images/genesis.jpeg",
+    metrics: {
+      users: 1500,
+      deploymentTime: "2.5s",
+      modelsDeployed: 4,
+      dataProcessed: "15TB/month",
+      latencyReduction: "78%",
+      pipelineSuccess: 98,
+      searchTime: "0.00s",
+      qualityScore: 0.95,
+      agentCount: 4
+    }
+  },
+  {
+    id: 2,
     title: "Skysense IoT Platform - Cloud Native System",
     description: "Complete cloud-native IoT platform with real-time data streaming, Kubernetes orchestration, and microservices architecture. Features auto-scaling, service mesh, GitOps workflows, and comprehensive monitoring.",
     technologies: [
@@ -76,7 +114,7 @@ export const projectsData: Project[] = [
       "Nginx"
     ],
     githubUrl: "https://github.com/pashitox/skysense-iot-platform",
-    demoUrl: "https://skysense-demo.vercel.app",
+    demoUrl: "ttps://github.com/pashitox/skysense-iot-platform",
     image: "/images/sky.png",
     metrics: {
       users: 1500,
@@ -90,7 +128,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 2,
+    id: 3,
     title: "Automated Project Manager - AI Workflow Platform",
     description: "Complete automation ecosystem with Vue.js frontend and n8n workflow engine. Features real-time task management, AI-powered analysis, multi-channel notifications, and zero traditional backend architecture.",
     technologies: [
@@ -107,7 +145,7 @@ export const projectsData: Project[] = [
       "Webhooks"
     ],
     githubUrl: "https://github.com/pashitox/automated-project-manager",
-    demoUrl: "http://localhost:5173",
+    demoUrl: "https://github.com/pashitox/automated-project-manager",
     image: "/images/3.jpg",
     metrics: {
       users: 18,
@@ -116,22 +154,6 @@ export const projectsData: Project[] = [
       dataProcessed: "1.2GB/day",
       latencyReduction: "80%",
       accuracy: 94.5
-    }
-  },
-  {
-    id: 3,
-    title: "WebTwin - Virtual Twin Web Companion",
-    description: "Advanced web analysis platform that creates virtual twins of websites, scanning DOM structures, simulating user interactions, and identifying UX optimization opportunities. Full Docker orchestration with real-time analytics.",
-    technologies: ["Next.js", "TypeScript", "Node.js", "Playwright", "Docker", "Tailwind CSS", "Express"],
-    githubUrl: "https://github.com/pashitox/web-twin",
-    demoUrl: "https://github.com/pashitox/web-twin",
-    image: "/images/twin.png",
-    metrics: {
-      users: 2847,
-      deploymentTime: "1.2s",
-      modelsDeployed: 3,
-      dataProcessed: "15TB/month",
-      latencyReduction: "65%"
     }
   },
   {
@@ -153,7 +175,7 @@ export const projectsData: Project[] = [
       "Google OAuth"
     ],
     githubUrl: "https://github.com/pashitox/nexus-shop",
-    demoUrl: "https://nexus-shop.vercel.app",
+    demoUrl: "https://github.com/pashitox/nexus-shop",
     image: "/images/nexus.png",
     metrics: {
       users: 2500,
@@ -191,55 +213,44 @@ export const projectsData: Project[] = [
       accuracy: 92.5,
       users: 350
     }
-  },
-  {
-    id: 7,
-    title: "Satellite Anomaly Detector — ESA Missions",
-    description: "Anomaly detection system for ESA missions, integrating multiple data sources and predictive models with SHAP-based explanations.",
-    technologies: ["Python 3.9", "Pandas", "NumPy", "Scikit-learn", "XGBoost", "SHAP", "Jupyter Notebook"],
-    githubUrl: "https://github.com/pashitox/satellite-anomaly-detector-ESA",
-    demoUrl: "https://github.com/pashitox/satellite-anomaly-detector-ESA",
-    image: "/images/project4.png",
-    metrics: {
-      accuracy: 96.2,
-      modelsDeployed: 3,
-      dataProcessed: "8.5GB/day"
-    }
   }
 ];
 
 // ---------------- SKILLS ----------------
 export const skillsData: Skill[] = [
+  // 🧠 AI & Multi-Agent Systems
+  { name: "Multi-Agent Architecture", level: 92, category: 'ai-systems' },
+  { name: "RAG Systems", level: 90, category: 'ai-systems' },
+  { name: "FAISS Vector Search", level: 88, category: 'ai-systems' },
+  { name: "Autonomous AI", level: 87, category: 'ai-systems' },
+  { name: "LLM Integration", level: 89, category: 'ai-systems' },
+  { name: "Semantic Search", level: 86, category: 'ai-systems' },
+  
   // 🌐 Full Stack Web & Modern Development
-  { name: "Angular 17", level: 88, category: 'web-development' },
-  { name: "Next.js", level: 92, category: 'web-development' },
+  { name: "Next.js 15", level: 92, category: 'web-development' },
   { name: "TypeScript", level: 90, category: 'web-development' },
   { name: "React", level: 90, category: 'web-development' },
+  { name: "Angular 17", level: 88, category: 'web-development' },
   { name: "Vue.js 3", level: 88, category: 'web-development' },
   { name: "Node.js / Express", level: 88, category: 'web-development' },
   { name: "Tailwind CSS", level: 92, category: 'web-development' },
-  { name: "Playwright", level: 85, category: 'web-development' },
-  { name: "API Integration", level: 90, category: 'web-development' },
   { name: "WebSockets", level: 87, category: 'web-development' },
+  { name: "FastAPI", level: 88, category: 'web-development' },
   
   // 🛠️ Data Engineering
   { name: "Apache Spark", level: 95, category: 'data-engineering' },
   { name: "Apache Kafka", level: 90, category: 'data-engineering' },
   { name: "Apache Airflow", level: 88, category: 'data-engineering' },
-  { name: "Workflow Orchestration", level: 87, category: 'data-engineering' },
-  { name: "Real-time Systems", level: 84, category: 'data-engineering' },
-  { name: "dbt", level: 85, category: 'data-engineering' },
   { name: "PostgreSQL", level: 90, category: 'data-engineering' },
-  { name: "Apache Flink", level: 82, category: 'data-engineering' },
+  { name: "Real-time Systems", level: 84, category: 'data-engineering' },
+  { name: "Data Pipelines", level: 87, category: 'data-engineering' },
 
   // ☁️ Cloud & DevOps
-  { name: "Kubernetes", level: 85, category: 'cloud' },
   { name: "Docker", level: 90, category: 'cloud' },
-  { name: "Terraform", level: 80, category: 'cloud' },
+  { name: "Kubernetes", level: 85, category: 'cloud' },
   { name: "AWS", level: 75, category: 'cloud' },
-  { name: "Istio", level: 78, category: 'cloud' },
-  { name: "ArgoCD", level: 82, category: 'cloud' },
-  { name: "Helm", level: 80, category: 'cloud' },
+  { name: "CI/CD Pipelines", level: 83, category: 'cloud' },
+  { name: "Terraform", level: 80, category: 'cloud' },
   { name: "Nginx", level: 85, category: 'cloud' },
 
   // 🤖 Machine Learning
@@ -248,26 +259,21 @@ export const skillsData: Skill[] = [
   { name: "TensorFlow", level: 80, category: 'machine-learning' },
   { name: "Scikit-learn", level: 88, category: 'machine-learning' },
   { name: "XGBoost", level: 87, category: 'machine-learning' },
-  { name: "Computer Vision", level: 82, category: 'machine-learning' },
 
   // ⚙️ MLOps & Automation
-  { name: "FastAPI", level: 88, category: 'mlops' },
   { name: "n8n Automation", level: 85, category: 'mlops' },
   { name: "MLflow", level: 85, category: 'mlops' },
-  { name: "CI/CD Pipelines", level: 83, category: 'mlops' },
+  { name: "Workflow Orchestration", level: 87, category: 'mlops' },
 
   // 📊 Visualization / Dashboards
   { name: "Grafana", level: 85, category: 'visualization' },
-  { name: "Power BI", level: 79, category: 'visualization' },
   { name: "Streamlit", level: 86, category: 'visualization' },
   { name: "Plotly", level: 81, category: 'visualization' },
-  { name: "Kiali", level: 78, category: 'visualization' },
 
   // 🔗 IoT & Real-time
   { name: "IoT Protocols", level: 82, category: 'iot' },
   { name: "Real-time Data", level: 85, category: 'iot' },
-  { name: "Sensor Integration", level: 80, category: 'iot' },
-  { name: "Message Brokers", level: 87, category: 'iot' }
+  { name: "Sensor Integration", level: 80, category: 'iot' }
 ];
 
 // ---------------- NAVIGATION ----------------
@@ -282,80 +288,81 @@ export const navLinks: NavLink[] = [
 
 // ---------------- DASHBOARD METRICS ----------------
 export const dashboardStats = {
-  totalVisitors: 3847,
-  uniqueVisitors: 2656,
-  returningVisitors: 1191,
-  projectsCompleted: 21,
-  happyClients: 27,
-  codeCommits: 1567,
-  linesOfCode: 189430,
-  bugsFixed: 203,
-  coffeeCups: 1120
+  totalVisitors: 4847,
+  uniqueVisitors: 3256,
+  returningVisitors: 1591,
+  projectsCompleted: 22,
+  happyClients: 28,
+  codeCommits: 1890,
+  linesOfCode: 215430,
+  bugsFixed: 245,
+  coffeeCups: 1350
 };
 
 export const visitorStats: VisitorStats = {
-  totalVisitors: 3847,
-  uniqueVisitors: 2656,
-  returningVisitors: 1191,
-  projectsViewed: 6823,
-  contactRequests: 63
+  totalVisitors: 4847,
+  uniqueVisitors: 3256,
+  returningVisitors: 1591,
+  projectsViewed: 7823,
+  contactRequests: 78
 };
 
 export const githubStats: GitHubStats = {
-  repositories: 32,
-  stars: 189,
-  forks: 94,
-  contributions: 1567
+  repositories: 35,
+  stars: 215,
+  forks: 112,
+  contributions: 1890
 };
 
 export const projectMetrics = {
-  totalProjects: 21,
-  activeProjects: 6,
+  totalProjects: 22,
+  activeProjects: 7,
   completedProjects: 15,
-  successRate: 96.8,
-  totalUsers: 3268,
-  dataProcessed: "71.2TB"
+  successRate: 97.2,
+  totalUsers: 4768,
+  dataProcessed: "84.2TB",
+  aiAgentsDeployed: 4
 };
 
 // ---------------- VISUAL DATA ----------------
 export const monthlyVisitors = [
-  { month: 'Jan', visitors: 215, returning: 89 },
-  { month: 'Feb', visitors: 278, returning: 112 },
-  { month: 'Mar', visitors: 342, returning: 145 },
-  { month: 'Apr', visitors: 398, returning: 178 },
-  { month: 'May', visitors: 456, returning: 201 },
-  { month: 'Jun', visitors: 512, returning: 234 },
-  { month: 'Jul', visitors: 567, returning: 267 },
-  { month: 'Aug', visitors: 623, returning: 289 },
-  { month: 'Sep', visitors: 689, returning: 312 },
-  { month: 'Oct', visitors: 756, returning: 345 },
-  { month: 'Nov', visitors: 834, returning: 378 },
-  { month: 'Dec', visitors: 901, returning: 412 }
+  { month: 'Jan', visitors: 315, returning: 125 },
+  { month: 'Feb', visitors: 378, returning: 145 },
+  { month: 'Mar', visitors: 442, returning: 178 },
+  { month: 'Apr', visitors: 498, returning: 201 },
+  { month: 'May', visitors: 556, returning: 234 },
+  { month: 'Jun', visitors: 612, returning: 267 },
+  { month: 'Jul', visitors: 689, returning: 289 },
+  { month: 'Aug', visitors: 756, returning: 312 },
+  { month: 'Sep', visitors: 834, returning: 345 },
+  { month: 'Oct', visitors: 923, returning: 378 },
+  { month: 'Nov', visitors: 1012, returning: 412 },
+  { month: 'Dec', visitors: 1156, returning: 456 }
 ];
 
 export const technologyUsage = [
+  { name: 'Multi-Agent AI', usage: 92, projects: 1 },
   { name: 'Apache Spark', usage: 95, projects: 12 },
   { name: 'Python', usage: 93, projects: 18 },
-  { name: 'Kubernetes', usage: 85, projects: 8 },
-  { name: 'Docker', usage: 90, projects: 16 },
-  { name: 'Angular 17', usage: 88, projects: 3 },
-  { name: 'Next.js', usage: 92, projects: 8 },
-  { name: 'TypeScript', usage: 90, projects: 10 },
-  { name: 'PostgreSQL', usage: 90, projects: 15 },
-  { name: 'FastAPI', usage: 88, projects: 7 },
+  { name: 'Next.js 15', usage: 92, projects: 9 },
+  { name: 'TypeScript', usage: 90, projects: 11 },
+  { name: 'Docker', usage: 90, projects: 17 },
+  { name: 'FastAPI', usage: 88, projects: 8 },
+  { name: 'PostgreSQL', usage: 90, projects: 16 },
+  { name: 'Kubernetes', usage: 85, projects: 9 },
   { name: 'Apache Kafka', usage: 90, projects: 10 },
+  { name: 'Angular 17', usage: 88, projects: 3 },
   { name: 'Vue.js 3', usage: 88, projects: 1 },
-  { name: 'n8n Automation', usage: 85, projects: 1 },
-  { name: 'WebSockets', usage: 87, projects: 4 },
-  { name: 'Grafana', usage: 85, projects: 6 },
-  { name: 'AWS', usage: 75, projects: 7 }
+  { name: 'FAISS', usage: 88, projects: 1 },
+  { name: 'WebSockets', usage: 87, projects: 5 },
+  { name: 'AWS', usage: 75, projects: 8 }
 ];
 
 export const projectCategories = [
+  { name: 'AI & Multi-Agent Systems', count: 1, color: '#8B5CF6' },
   { name: 'Data Engineering', count: 9, color: '#3B82F6' },
-  { name: 'Machine Learning', count: 7, color: '#10B981' },
-  { name: 'Web Development', count: 9, color: '#06B6D4' },
-  { name: 'Cloud & DevOps', count: 6, color: '#8B5CF6' },
-  { name: 'IoT', count: 4, color: '#F59E0B' },
-  { name: 'Visualization', count: 5, color: '#EC4899' }
+  { name: 'Machine Learning', count: 6, color: '#10B981' },
+  { name: 'Web Development', count: 10, color: '#06B6D4' },
+  { name: 'Cloud & DevOps', count: 7, color: '#F59E0B' },
+  { name: 'IoT', count: 4, color: '#EC4899' }
 ];
