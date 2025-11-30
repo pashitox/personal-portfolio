@@ -81,6 +81,41 @@ const buttonVariants = {
   }
 };
 
+// Componente de partículas separado que solo se renderiza en el cliente
+const FloatingParticles = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  return (
+    <div className="absolute inset-0 overflow-hidden">
+      {[...Array(12)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-2 h-2 bg-blue-400/30 rounded-full"
+          initial={{ 
+            x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200),
+            y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800)
+          }}
+          animate={{
+            y: [0, -30, 0],
+            opacity: [0.3, 0.7, 0.3],
+          }}
+          transition={{
+            duration: 3 + Math.random() * 2,
+            repeat: Infinity,
+            delay: Math.random() * 2,
+          }}
+        />
+      ))}
+    </div>
+  );
+};
+
 export default function Hero({ setCurrentSection }: HeroProps) {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -100,33 +135,13 @@ export default function Hero({ setCurrentSection }: HeroProps) {
         animate={{ scale: 1, opacity: 0.15 }}
         transition={{ duration: 2, ease: "easeOut" }}
       >
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-blue-500 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full blur-3xl animate-pulse-slower"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full blur-3xl"></div>
       </motion.div>
 
-      {/* Partículas flotantes */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(15)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-blue-400/30 rounded-full"
-            initial={{ 
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight 
-            }}
-            animate={{
-              y: [0, -30, 0],
-              opacity: [0.3, 0.7, 0.3],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-      </div>
+      {/* Partículas flotantes - Solo en cliente */}
+      <FloatingParticles />
 
       <motion.div
         className="max-w-6xl mx-auto w-full flex flex-col-reverse md:flex-row items-center md:items-start gap-8 md:gap-16 relative z-10"
@@ -159,7 +174,7 @@ export default function Hero({ setCurrentSection }: HeroProps) {
           <motion.div variants={itemVariants}>
             <motion.p 
               className="text-base sm:text-lg md:text-xl mb-8 mx-auto md:mx-0 leading-relaxed max-w-4xl text-gray-600 dark:text-gray-400 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl border border-white/20 shadow-lg"
-              whileHover={{ scale: 1.01, boxShadow: "0 20px 40px -10px rgba(59, 130, 246, 0.1)" }}
+              whileHover={{ scale: 1.01 }}
             >
               <span className="font-semibold text-gray-900 dark:text-white">Computer Engineer & Master&apos;s in Research</span> specialized in 
               <span className="text-blue-600 dark:text-blue-300 font-semibold"> Multi-Agent AI Systems </span> 
@@ -180,17 +195,7 @@ export default function Hero({ setCurrentSection }: HeroProps) {
             >
               <span className="relative z-10 flex items-center gap-2">
                 🚀 View Projects 
-                <motion.span
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  →
-                </motion.span>
               </span>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100"
-                transition={{ duration: 0.3 }}
-              />
             </motion.button>
             
             <motion.button
@@ -265,13 +270,11 @@ export default function Hero({ setCurrentSection }: HeroProps) {
               className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/30 via-purple-500/20 to-transparent z-20"
               animate={{ 
                 opacity: [0.3, 0.6, 0.3],
-                rotate: [0, 180, 360] 
               }}
               transition={{ 
                 duration: 4, 
                 repeat: Infinity, 
                 repeatType: "reverse",
-                ease: "linear"
               }}
             />
           </div>
