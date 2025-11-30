@@ -32,7 +32,7 @@ export default function AIExperience() {
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow border-l-4 border-purple-500">
                 <strong className="text-purple-600 dark:text-purple-400">GENESIS AI - Autonomous Chat Engine:</strong>
-                <p className="mt-2">World's first self-improving chatbot with 4-agent architecture (RAG, Reasoner, Critic, Improver). Features autonomous quality scoring (0.3-0.95), real-time agent monitoring, and continuous learning through agentic feedback loops.</p>
+                <p className="mt-2">World&apos;s first self-improving chatbot with 4-agent architecture (RAG, Reasoner, Critic, Improver). Features autonomous quality scoring (0.3-0.95), real-time agent monitoring, and continuous learning through agentic feedback loops.</p>
               </div>
               <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow border-l-4 border-blue-500">
                 <strong className="text-blue-600 dark:text-blue-400">Automated Project Manager:</strong>
