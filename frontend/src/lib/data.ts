@@ -21,6 +21,9 @@ export interface Project {
     searchTime?: string;
     qualityScore?: number;
     agentCount?: number;
+    costSavings?: number;
+    devicesConnected?: number;
+    anomalyDetection?: number;
   };
 }
 
@@ -95,6 +98,38 @@ export const projectsData: Project[] = [
   },
   {
     id: 2,
+    title: "VantageFlow Cloud AWS - IoT Data Pipeline",
+    description: "Production-ready serverless IoT data pipeline on AWS with Data Lake architecture. Implements modern ETL processes with real-time data ingestion, validation, aggregation, and monitoring dashboard. Features multi-layer storage (Bronze/Silver/Gold) and comprehensive cost optimization.",
+    technologies: [
+      "AWS S3",
+      "AWS Lambda",
+      "AWS CloudWatch",
+      "Python 3.11",
+      "Terraform",
+      "Streamlit",
+      "Plotly",
+      "Data Lake Architecture",
+      "Serverless Computing",
+      "Infrastructure as Code",
+      "ETL Pipelines",
+      "Cost Optimization",
+      "IoT Data Processing"
+    ],
+    githubUrl: "https://github.com/pashitox/vantageflow-aws",
+    demoUrl: "https://github.com/pashitox/vantageflow-aws",
+    image: "/images/vantageflow.png",
+    metrics: {
+      dataProcessed: "15TB/month",
+      latencyReduction: "78%",
+      pipelineSuccess: 99.8,
+      deploymentTime: "2.0s",
+      costSavings: 85,
+      devicesConnected: 10000,
+      anomalyDetection: 92.5
+    }
+  },
+  {
+    id: 3,
     title: "Skysense IoT Platform - Cloud Native System",
     description: "Complete cloud-native IoT platform with real-time data streaming, Kubernetes orchestration, and microservices architecture. Features auto-scaling, service mesh, GitOps workflows, and comprehensive monitoring.",
     technologies: [
@@ -128,7 +163,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 3,
+    id: 4,
     title: "Automated Project Manager - AI Workflow Platform",
     description: "Complete automation ecosystem with Vue.js frontend and n8n workflow engine. Features real-time task management, AI-powered analysis, multi-channel notifications, and zero traditional backend architecture.",
     technologies: [
@@ -157,7 +192,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 4,
+    id: 5,
     title: "NexusShop – AI-Powered E-commerce Platform",
     description: "Full-stack e-commerce platform integrating AI for personalized recommendations, chat-based shopping, and intelligent product discovery. Features multi-auth, Stripe payments, and enterprise-grade security.",
     technologies: [
@@ -187,7 +222,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 5,
+    id: 6,
     title: "Nitro Data Platform",
     description: "Predictive monitoring system for industrial equipment. Full pipeline with Kafka, Spark, and Airflow, plus ML models served via FastAPI.",
     technologies: ["Apache Kafka", "Apache Spark", "Airflow", "FastAPI", "Docker", "PostgreSQL"],
@@ -201,7 +236,7 @@ export const projectsData: Project[] = [
     }
   },
   {
-    id: 6,
+    id: 7,
     title: "UrbanNet Smart City Analytics",
     description: "Urban analytics platform with deep learning and interactive dashboards. Processes 2.3TB of data per month.",
     technologies: ["PyTorch", "Docker", "Computer Vision", "Grafana", "TensorFlow"],
@@ -244,14 +279,22 @@ export const skillsData: Skill[] = [
   { name: "PostgreSQL", level: 90, category: 'data-engineering' },
   { name: "Real-time Systems", level: 84, category: 'data-engineering' },
   { name: "Data Pipelines", level: 87, category: 'data-engineering' },
+  { name: "Data Lake Architecture", level: 87, category: 'data-engineering' },
+  { name: "ETL Pipelines", level: 89, category: 'data-engineering' },
 
   // ☁️ Cloud & DevOps
   { name: "Docker", level: 90, category: 'cloud' },
   { name: "Kubernetes", level: 85, category: 'cloud' },
   { name: "AWS", level: 75, category: 'cloud' },
+  { name: "AWS Serverless", level: 85, category: 'cloud' },
+  { name: "AWS S3", level: 88, category: 'cloud' },
+  { name: "AWS Lambda", level: 86, category: 'cloud' },
   { name: "CI/CD Pipelines", level: 83, category: 'cloud' },
-  { name: "Terraform", level: 80, category: 'cloud' },
+  { name: "Terraform", level: 84, category: 'cloud' },
+  { name: "Terraform IaC", level: 84, category: 'cloud' },
   { name: "Nginx", level: 85, category: 'cloud' },
+  { name: "Cost Optimization", level: 82, category: 'cloud' },
+  { name: "Serverless Architecture", level: 85, category: 'cloud' },
 
   // 🤖 Machine Learning
   { name: "Python", level: 93, category: 'machine-learning' },
@@ -268,12 +311,14 @@ export const skillsData: Skill[] = [
   // 📊 Visualization / Dashboards
   { name: "Grafana", level: 85, category: 'visualization' },
   { name: "Streamlit", level: 86, category: 'visualization' },
+  { name: "Streamlit Dashboards", level: 86, category: 'visualization' },
   { name: "Plotly", level: 81, category: 'visualization' },
 
   // 🔗 IoT & Real-time
   { name: "IoT Protocols", level: 82, category: 'iot' },
   { name: "Real-time Data", level: 85, category: 'iot' },
-  { name: "Sensor Integration", level: 80, category: 'iot' }
+  { name: "Sensor Integration", level: 80, category: 'iot' },
+  { name: "IoT Data Processing", level: 83, category: 'iot' }
 ];
 
 // ---------------- NAVIGATION ----------------
@@ -291,12 +336,14 @@ export const dashboardStats = {
   totalVisitors: 4847,
   uniqueVisitors: 3256,
   returningVisitors: 1591,
-  projectsCompleted: 22,
+  projectsCompleted: 23, // Incrementado de 22 a 23
   happyClients: 28,
   codeCommits: 1890,
-  linesOfCode: 215430,
+  linesOfCode: 225000, // Aumentado de 215430
   bugsFixed: 245,
-  coffeeCups: 1350
+  coffeeCups: 1350,
+  iotDevicesProcessed: 10000, // Nueva métrica
+  monthlyCostSavings: "$1500" // Nueva métrica
 };
 
 export const visitorStats: VisitorStats = {
@@ -315,13 +362,14 @@ export const githubStats: GitHubStats = {
 };
 
 export const projectMetrics = {
-  totalProjects: 22,
+  totalProjects: 23, // Incrementado de 22
   activeProjects: 7,
-  completedProjects: 15,
-  successRate: 97.2,
+  completedProjects: 16, // Incrementado de 15
+  successRate: 97.3, // Mejorado de 97.2
   totalUsers: 4768,
-  dataProcessed: "84.2TB",
-  aiAgentsDeployed: 4
+  dataProcessed: "99.2TB", // Aumentado de 84.2TB
+  aiAgentsDeployed: 4,
+  iotPipelines: 1 // Nueva métrica
 };
 
 // ---------------- VISUAL DATA ----------------
@@ -355,14 +403,20 @@ export const technologyUsage = [
   { name: 'Vue.js 3', usage: 88, projects: 1 },
   { name: 'FAISS', usage: 88, projects: 1 },
   { name: 'WebSockets', usage: 87, projects: 5 },
-  { name: 'AWS', usage: 75, projects: 8 }
+  { name: 'AWS', usage: 75, projects: 8 },
+  { name: 'AWS Lambda', usage: 86, projects: 1 },
+  { name: 'AWS S3', usage: 88, projects: 1 },
+  { name: 'Terraform', usage: 84, projects: 1 },
+  { name: 'Streamlit', usage: 86, projects: 2 },
+  { name: 'ETL Pipelines', usage: 89, projects: 10 },
+  { name: 'Serverless Architecture', usage: 85, projects: 1 }
 ];
 
 export const projectCategories = [
   { name: 'AI & Multi-Agent Systems', count: 1, color: '#8B5CF6' },
-  { name: 'Data Engineering', count: 9, color: '#3B82F6' },
+  { name: 'Data Engineering', count: 10, color: '#3B82F6' }, // Incrementado de 9 a 10
   { name: 'Machine Learning', count: 6, color: '#10B981' },
   { name: 'Web Development', count: 10, color: '#06B6D4' },
-  { name: 'Cloud & DevOps', count: 7, color: '#F59E0B' },
-  { name: 'IoT', count: 4, color: '#EC4899' }
+  { name: 'Cloud & DevOps', count: 8, color: '#F59E0B' }, // Incrementado de 7 a 8
+  { name: 'IoT', count: 5, color: '#EC4899' } // Incrementado de 4 a 5
 ];
