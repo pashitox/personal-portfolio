@@ -115,9 +115,9 @@ export const projectsData: Project[] = [
       "Cost Optimization",
       "IoT Data Processing"
     ],
-    githubUrl: "https://github.com/pashitox/vantageflow-aws",
-    demoUrl: "https://github.com/pashitox/vantageflow-aws",
-    image: "/images/vantageflow.png",
+    githubUrl: "https://github.com/pashitox/VantageFlow-Cloud-AWS",
+    demoUrl: "https://github.com/pashitox/VantageFlow-Cloud-AWS",
+    image: "/images/aws.jpg",
     metrics: {
       dataProcessed: "15TB/month",
       latencyReduction: "78%",
